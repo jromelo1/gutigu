@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GUTIGU - Tecnología clara para adultos (50+)</title>
 
-  <meta name="description" content="Apps, juegos de memoria, chat asistido y noticias de IA explicadas en fácil. Comunidad y semillero para ideas de negocio en tecnología en Colombia.">
+  <meta name="description" content="Apps como Guardian Digital para bloquear SMS spam, juegos para memoria, noticias de tecnología e IA en fácil, comunidad y semillero para ideas de negocio.">
   <meta name="author" content="GUTIGU">
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://gutigu.com/">
   <meta property="og:title" content="GUTIGU - Tecnología clara para adultos (50+)">
-  <meta property="og:description" content="Apps (Guardian Digital), juegos de memoria, chat/asistente y noticias de IA en fácil. Comunidad y semillero.">
+  <meta property="og:description" content="Ayuda real para adultos: seguridad digital, juegos de memoria, noticias en fácil y acompañamiento.">
   <meta property="og:image" content="https://gutigu.com/img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/png" href="favicon-gutigu.png">
@@ -33,10 +33,10 @@
       --text-soft: #344054;
       --muted: #667085;
 
-      --primary: #1D4ED8;
+      --primary: #1D4ED8;     /* confianza */
       --primary-2: #0B63CE;
-      --accent: #0F766E;
-      --warning: #B45309;
+      --accent: #0F766E;      /* seguridad */
+      --warning: #B45309;     /* cuidado */
       --success: #166534;
 
       --border: #D0D5DD;
@@ -114,7 +114,7 @@
     .nav-links a {
       text-decoration: none;
       color: var(--text-soft);
-      font-weight: 800;
+      font-weight: 900;
       font-size: 0.95rem;
       padding: 0.55rem 0.7rem;
       border-radius: 12px;
@@ -139,7 +139,7 @@
       color: var(--muted);
       display: block;
       margin-bottom: 1rem;
-      font-weight: 800;
+      font-weight: 900;
       letter-spacing: 0.2px;
       font-size: 1rem;
     }
@@ -153,7 +153,7 @@
     }
 
     .hero p {
-      max-width: 900px;
+      max-width: 920px;
       color: var(--text-soft);
       font-size: 1.1rem;
     }
@@ -177,7 +177,7 @@
       background: var(--surface);
       color: var(--text);
       cursor: pointer;
-      font-weight: 900;
+      font-weight: 950;
       text-decoration: none;
       transition: 0.2s ease;
       user-select: none;
@@ -187,13 +187,25 @@
     .btn-primary { background: var(--primary); border-color: var(--primary); color: #fff; }
     .btn-primary:hover { background: var(--primary-2); }
     .btn-ghost { background: transparent; }
-    .btn-accent { background: var(--accent); border-color: var(--accent); color:#fff; }
-    .btn-accent:hover { filter: brightness(0.95); }
 
-    .sections { padding: 3.5rem 1.25rem; max-width: 1200px; margin: 0 auto; }
+    .sections {
+      padding: 3.5rem 1.25rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
     .section-header { text-align: left; margin-bottom: 1.75rem; }
-    .section-title { font-family: 'Archivo Black', sans-serif; font-size: 2rem; color: var(--text); margin-bottom: 0.5rem; }
-    .section-subtitle { color: var(--muted); font-size: 1.05rem; max-width: 920px; }
+    .section-title {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 2rem;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    .section-subtitle {
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 940px;
+    }
 
     .grid {
       display: grid;
@@ -222,14 +234,14 @@
       border: 1px solid var(--border);
       background: var(--surface-2);
       color: var(--text-soft);
-      font-weight: 900;
+      font-weight: 950;
       font-size: 0.9rem;
     }
 
     .iconbox {
       width: 56px; height: 56px;
       display:flex; align-items:center; justify-content:center;
-      border-radius: 14px; color:#fff; font-weight: 900;
+      border-radius: 14px; color:#fff; font-weight: 950;
       margin-bottom: 1rem;
       font-size: 1.1rem;
     }
@@ -304,94 +316,9 @@
       transition: 0.2s ease;
     }
     .news-item:hover { box-shadow: var(--shadow); transform: translateY(-1px); }
-    .news-date { min-width: 110px; color: var(--primary); font-weight: 900; font-size: 1rem; }
+    .news-date { min-width: 110px; color: var(--primary); font-weight: 950; font-size: 1rem; }
     .news-item h3 { margin-bottom: 0.25rem; font-size: 1.2rem; color: var(--text); }
     .news-item p { color: var(--text-soft); font-size: 1.02rem; }
-
-    /* Chat */
-    .chat-shell {
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      background: var(--surface);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-
-    .chat-header {
-      padding: 1rem 1.1rem;
-      background: var(--surface-2);
-      border-bottom: 1px solid var(--border);
-      display:flex;
-      align-items:center;
-      justify-content: space-between;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .chat-title {
-      font-weight: 1000;
-      color: var(--text);
-      display:flex;
-      align-items:center;
-      gap: 0.6rem;
-    }
-
-    .chat-body {
-      height: 360px;
-      overflow-y: auto;
-      padding: 1rem;
-      display:flex;
-      flex-direction: column;
-      gap: 0.75rem;
-      background: linear-gradient(180deg, #fff 0%, #fbfcff 100%);
-    }
-
-    .msg {
-      max-width: 90%;
-      padding: 0.75rem 0.9rem;
-      border-radius: 16px;
-      border: 1px solid var(--border);
-      line-height: 1.55;
-      font-size: 1.02rem;
-      white-space: pre-wrap;
-    }
-
-    .msg.user {
-      margin-left: auto;
-      background: rgba(29, 78, 216, 0.07);
-      border-color: rgba(29, 78, 216, 0.18);
-    }
-
-    .msg.assistant {
-      margin-right: auto;
-      background: rgba(15, 118, 110, 0.06);
-      border-color: rgba(15, 118, 110, 0.18);
-    }
-
-    .chat-footer {
-      padding: 1rem;
-      border-top: 1px solid var(--border);
-      display:flex;
-      gap: 0.6rem;
-      align-items: center;
-      background: var(--surface);
-      flex-wrap: wrap;
-    }
-
-    .chat-input {
-      flex: 1 1 260px;
-      min-height: 48px;
-      padding: 0.85rem 0.95rem;
-      border-radius: 14px;
-      border: 1px solid var(--border);
-      font-size: 1.05rem;
-      color: var(--text);
-      background: var(--bg-soft);
-    }
-
-    .chat-input:focus { outline: none; border-color: rgba(29, 78, 216, 0.55); box-shadow: 0 0 0 4px rgba(29, 78, 216, 0.10); }
-
-    .small-note { margin-top: 0.75rem; color: var(--muted); font-size: 0.98rem; }
 
     /* Form */
     .form-container {
@@ -416,7 +343,11 @@
     }
 
     .form-control::placeholder { color: #98A2B3; }
-    .form-control:focus { outline: none; border-color: rgba(29, 78, 216, 0.55); box-shadow: 0 0 0 4px rgba(29, 78, 216, 0.10); }
+    .form-control:focus {
+      outline: none;
+      border-color: rgba(29, 78, 216, 0.55);
+      box-shadow: 0 0 0 4px rgba(29, 78, 216, 0.10);
+    }
 
     .submit-btn {
       width: 100%;
@@ -435,6 +366,8 @@
 
     .submit-btn:hover { background: var(--primary-2); box-shadow: var(--shadow); }
     .submit-btn:disabled { opacity: 0.7; cursor: not-allowed; }
+
+    .small-note { margin-top: 0.75rem; color: var(--muted); font-size: 0.98rem; }
 
     .fade-in { opacity: 0; transform: translateY(18px); transition: 0.45s all ease; }
     .fade-in.visible { opacity: 1; transform: translateY(0); }
@@ -482,10 +415,14 @@
     <nav>
       <a href="#" class="logo" aria-label="Inicio GUTIGU">GUTIGU</a>
       <ul class="nav-links" aria-label="Menú principal">
-        <li><a href="#oferta">Oferta</a></li>
+        <li><a href="#oferta">¿Qué hay aquí?</a></li>
         <li><a href="#apps">Apps</a></li>
         <li><a href="#juegos">Juegos</a></li>
-        <li><a href="#chat">Chat</a></li>
+        <li>
+          <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">
+            Conversar
+          </a>
+        </li>
         <li><a href="#noticias">Noticias</a></li>
         <li><a href="#comunidad">Comunidad</a></li>
         <li><a href="#semillero">Semillero</a></li>
@@ -495,112 +432,138 @@
 
   <!-- HERO -->
   <section class="hero" aria-label="Presentación">
-    <span class="hero-kicker">Tecnología para adultos (50+): clara, útil y sin afán.</span>
-    <h1>Apps, juegos, noticias y un asistente para conversar.<br>Todo en un solo lugar.</h1>
+    <span class="hero-kicker">Tecnología explicada con calma, paso a paso.</span>
+
+    <h1>
+      No tienes que entenderlo todo.<br>
+      Solo necesitas que alguien te lo explique bien.
+    </h1>
+
     <p>
-      En GUTIGU ayudamos a adultos a mantenerse actualizados en tecnología e IA con herramientas prácticas:
-      <strong>apps de seguridad</strong> (como Guardian Digital), <strong>juegos para memoria</strong>, <strong>noticias en fácil</strong>,
-      <strong>un chat/asistente</strong> para preguntar lo que necesites y una <strong>comunidad</strong> para aprender acompañado(a).
+      En GUTIGU acompañamos a adultos que quieren entender la tecnología sin enredos.
+      Aquí encuentras ayuda para proteger tu celular, ejercitar la memoria,
+      resolver dudas y aprender sin sentirte perdido(a).
     </p>
 
     <div class="hero-cta">
-      <a class="btn btn-primary" href="#apps">Ver apps</a>
-      <a class="btn btn-accent" href="#chat">Abrir chat</a>
-      <a class="btn btn-ghost" href="#semillero">Tengo una idea</a>
+      <a class="btn btn-primary"
+         href="https://chatgpt.com/"
+         target="_blank"
+         rel="noopener noreferrer">
+        Hablar con el asistente
+      </a>
+
+      <a class="btn btn-ghost" href="#apps">
+        Conocer nuestras ayudas
+      </a>
     </div>
   </section>
 
   <!-- OFERTA -->
-  <section id="oferta" class="sections fade-in">
+  <section id="oferta" class="sections fade-in" aria-label="Qué ofrecemos">
     <div class="section-header">
-      <h2 class="section-title">¿Qué ofrecemos?</h2>
+      <h2 class="section-title">¿Qué hay aquí?</h2>
       <p class="section-subtitle">
-        Un ecosistema pensado para adultos: seguridad, aprendizaje, acompañamiento y bienestar mental, con un lenguaje claro.
+        Un lugar pensado para adultos: seguridad, aprendizaje y acompañamiento, con un lenguaje claro y sin afán.
       </p>
     </div>
 
     <div class="grid">
       <div class="card">
         <div class="iconbox" style="background: var(--accent);">🛡️</div>
-        <h3>Apps para tu tranquilidad</h3>
-        <p>Herramientas como <strong>Guardian Digital</strong> para ayudar a bloquear SMS spam y reducir mensajes sospechosos.</p>
+        <h3>Apps para sentirte más seguro(a)</h3>
+        <p>
+          Herramientas como <strong>Guardian Digital</strong> para ayudar a bloquear SMS spam y reducir mensajes sospechosos.
+        </p>
       </div>
 
       <div class="card">
         <div class="iconbox" style="background: var(--primary);">🧠</div>
-        <h3>Juegos para memoria</h3>
-        <p>Ejercicios cortos para entrenar atención y memoria. Sencillos, sin presión y agradables.</p>
+        <h3>Juegos para mantener la mente activa</h3>
+        <p>
+          Ejercicios sencillos para entrenar memoria y atención. Sin presión, solo práctica.
+        </p>
       </div>
 
       <div class="card">
-        <div class="iconbox" style="background: var(--warning);">🤖</div>
-        <h3>Chat/Asistente</h3>
-        <p>Un espacio para escribir y preguntar lo que necesites. Ideal si estás aprendiendo o quieres resolver dudas.</p>
+        <div class="iconbox" style="background: var(--warning);">🤝</div>
+        <h3>Un espacio para preguntar</h3>
+        <p>
+          Si algo te confunde, puedes escribirlo y pedir que te lo expliquen con paciencia.
+        </p>
       </div>
 
       <div class="card">
         <div class="iconbox" style="background: #7C3AED;">📰</div>
-        <h3>Noticias de tecnología e IA</h3>
-        <p>Actualizaciones en fácil: qué cambió, por qué importa y cómo te sirve (sin tecnicismos).</p>
+        <h3>Noticias en fácil</h3>
+        <p>
+          Lo importante de tecnología e IA explicado de forma sencilla: qué pasó y cómo te puede servir.
+        </p>
       </div>
 
       <div class="card">
         <div class="iconbox" style="background: #0EA5E9;">👥</div>
         <h3>Comunidad</h3>
-        <p>Adultos que quieren actualizarse, compartir aprendizajes y avanzar acompañados.</p>
+        <p>
+          Adultos que quieren ponerse al día, compartir dudas y aprender acompañados. Sin pena.
+        </p>
       </div>
 
       <div class="card">
         <div class="iconbox" style="background: #111827;">💡</div>
         <h3>Semillero</h3>
-        <p>Si tienes una idea de negocio relacionada con tecnología, te ayudamos a aterrizarla paso a paso.</p>
+        <p>
+          Si tienes una idea de negocio relacionada con tecnología o juegos, te ayudamos a ordenarla y empezar.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- APPS -->
+  <!-- APPS / GUARDIAN -->
   <section id="apps" class="sections fade-in" aria-label="Apps">
     <div class="section-header">
-      <span class="badge">🛡️ Apps para adultos</span>
+      <span class="badge">🛡️ App para tranquilidad</span>
       <h2 class="section-title" style="margin-top:0.6rem;">Guardian Digital</h2>
       <p class="section-subtitle">
-        Una app pensada para ayudarte a <strong>bloquear SMS spam</strong> y detectar mensajes sospechosos. Menos ruido, menos riesgos.
+        Una ayuda sencilla para que tu celular esté más tranquilo.
       </p>
     </div>
 
     <div class="two-col">
       <div class="card">
-        <h3>¿Qué hace Guardian Digital?</h3>
+        <h3>¿Para qué sirve?</h3>
         <p>
-          Ayuda a filtrar mensajes molestos o peligrosos (por ejemplo: ofertas insistentes, enlaces raros o mensajes que te meten afán).
-          La meta es que tengas <strong>más tranquilidad</strong> al usar tu celular.
+          Guardian Digital ayuda a bloquear mensajes molestos y esos SMS sospechosos que dicen cosas como
+          “ganaste un premio” o “haz clic urgente”.
         </p>
 
-        <ul class="checklist" aria-label="Funciones principales">
-          <li><strong>Bloqueo de SMS spam</strong> (publicidad repetitiva / mensajes molestos).</li>
-          <li><strong>Alertas</strong> cuando un SMS tiene señales típicas de estafa.</li>
-          <li><strong>Recomendaciones claras</strong>: “qué hacer” y “qué evitar”.</li>
+        <ul class="checklist" aria-label="Beneficios principales">
+          <li>Reduce mensajes molestos.</li>
+          <li>Te avisa si algo parece peligroso.</li>
+          <li>Te orienta sobre qué hacer.</li>
         </ul>
-
-        <div class="hero-cta" style="margin-top:1rem;">
-          <a class="btn btn-primary" href="#semillero">Quiero apoyo para instalar/configurar</a>
-          <a class="btn btn-ghost" href="#chat">Preguntarle al asistente</a>
-        </div>
 
         <p class="small-note">
-          Nota: la seguridad perfecta no existe, pero sí se puede reducir muchísimo el riesgo combinando filtros + buenos hábitos.
+          No se trata de saber de tecnología. Se trata de sentirte más seguro(a) usando tu celular.
         </p>
+
+        <div class="hero-cta" style="margin-top:1rem;">
+          <a class="btn btn-primary" href="#semillero">Quiero ayuda para configurarlo</a>
+          <a class="btn btn-ghost" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">Preguntar algo</a>
+        </div>
       </div>
 
-      <div class="callout">
-        <h3>Consejos rápidos contra SMS spam</h3>
+      <div class="callout" aria-label="Consejos contra mensajes spam">
+        <h3>Consejos rápidos (sin enredos)</h3>
         <ul class="checklist">
-          <li>No abras enlaces si el mensaje te mete afán (“último aviso”).</li>
-          <li>No compartas códigos (OTP) ni contraseñas.</li>
-          <li>Si dice ser tu banco/entidad, confirma por el canal oficial.</li>
-          <li>Bloquea y reporta el número si es spam.</li>
+          <li>Si el mensaje te mete afán (“último aviso”), desconfía.</li>
+          <li>No compartas códigos ni claves por mensajes.</li>
+          <li>Si dice ser tu banco, verifica por el canal oficial.</li>
+          <li>Bloquea el número si es spam.</li>
         </ul>
-        <p class="small-note">Si quieres, te ayudamos a dejar todo configurado paso a paso.</p>
+        <p class="small-note">
+          Si quieres, te ayudamos a revisar tu caso paso a paso.
+        </p>
       </div>
     </div>
   </section>
@@ -609,8 +572,10 @@
   <section id="juegos" class="sections fade-in" aria-label="Juegos de memoria">
     <div class="section-header">
       <span class="badge">🧠 Juegos para adultos</span>
-      <h2 class="section-title" style="margin-top:0.6rem;">Mente maestra</h2>
-      <p class="section-subtitle">Ejercicio corto para entrenar atención y memoria. Sin presión: solo práctica.</p>
+      <h2 class="section-title" style="margin-top:0.6rem;">Ejercita tu mente</h2>
+      <p class="section-subtitle">
+        Un pequeño espacio para mantener la mente activa. Sin competencia. Sin presión. Solo práctica.
+      </p>
     </div>
 
     <div class="game-stats" aria-label="Estadísticas del ejercicio">
@@ -627,74 +592,46 @@
     <div id="game-board" class="game-container" aria-label="Tablero del ejercicio"></div>
 
     <div style="text-align: center; margin-top: 1.75rem;">
-      <button onclick="resetGame()" class="btn btn-ghost">Reiniciar ejercicio</button>
+      <button onclick="resetGame()" class="btn btn-ghost">Reiniciar</button>
     </div>
   </section>
 
-  <!-- CHAT -->
-  <section id="chat" class="sections fade-in" aria-label="Chat con asistente">
+  <!-- CHAT (BOTÓN A CHATGPT) -->
+  <section id="chat" class="sections fade-in" aria-label="Conversar">
     <div class="section-header">
-      <span class="badge">🤖 Chat / Asistente</span>
-      <h2 class="section-title" style="margin-top:0.6rem;">Habla o escribe con un asistente</h2>
+      <span class="badge">🤝 Aquí puedes preguntar</span>
+      <h2 class="section-title" style="margin-top:0.6rem;">
+        Si algo te confunde, escríbelo aquí
+      </h2>
       <p class="section-subtitle">
-        Para resolver dudas, aprender paso a paso o simplemente conversar. Incluimos “Chat con ChatGPT” en dos modos:
-        <strong>abrir ChatGPT</strong> o <strong>chat integrado</strong> (conexión segura desde tu servidor).
+        A veces solo necesitamos que alguien nos explique las cosas con paciencia.
+        Puedes preguntar lo que quieras, con tus propias palabras.
       </p>
     </div>
 
-    <div class="two-col">
-      <div class="chat-shell" role="region" aria-label="Chat integrado (demo)">
-        <div class="chat-header">
-          <div class="chat-title">💬 Chat integrado (demo)</div>
-          <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
-            <button class="btn btn-ghost" type="button" onclick="clearChat()">Limpiar</button>
-            <a class="btn btn-primary" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">Abrir ChatGPT</a>
-          </div>
-        </div>
-
-        <div id="chatBody" class="chat-body" aria-label="Mensajes del chat">
-          <div class="msg assistant">
-            Hola 😊 Soy tu asistente. Escribe una pregunta como:
-            “¿Cómo bloqueo mensajes spam?” o “Explícame qué es IA en sencillo”.
-          </div>
-          <div class="msg assistant">
-            Nota: este chat está listo para conectarse a un endpoint seguro (sin poner claves en la página).
-          </div>
-        </div>
-
-        <div class="chat-footer">
-          <input id="chatInput" class="chat-input" type="text" placeholder="Escribe aquí tu pregunta..." aria-label="Entrada de mensaje">
-          <button class="btn btn-accent" type="button" onclick="sendMessage()">Enviar</button>
-        </div>
-      </div>
-
-      <div class="callout" aria-label="Cómo funciona el chat con ChatGPT">
-        <h3>¿Cómo lo dejamos funcionando con ChatGPT?</h3>
-        <p style="color: var(--text-soft); margin-top: 0.5rem;">
-          Por seguridad, <strong>no se debe</strong> poner una API key dentro del HTML. Lo correcto es:
-        </p>
-        <ul class="checklist">
-          <li>Tu web llama a <strong>/api/chat</strong> (en tu servidor).</li>
-          <li>Tu servidor llama al modelo de OpenAI con tu API key.</li>
-          <li>El servidor devuelve la respuesta a la página.</li>
-        </ul>
-        <p class="small-note">
-          Si por ahora quieres algo simple, usa el botón <strong>“Abrir ChatGPT”</strong> y listo.
-        </p>
-        <div class="hero-cta" style="margin-top:0.75rem;">
-          <a class="btn btn-primary" href="#semillero">Quiero que lo integren</a>
-          <a class="btn btn-ghost" href="#apps">Volver a apps</a>
-        </div>
-      </div>
+    <div style="text-align:center; margin-top:1.5rem;">
+      <a class="btn btn-primary"
+         href="https://chatgpt.com/"
+         target="_blank"
+         rel="noopener noreferrer">
+        Hablar ahora
+      </a>
     </div>
+
+    <p class="small-note" style="text-align:center;">
+      Ejemplos: “¿Cómo evito que me estafen?”, “¿Qué es eso de la inteligencia artificial?”,
+      “¿Cómo uso mejor mi celular?”
+    </p>
   </section>
 
   <!-- NOTICIAS -->
-  <section id="noticias" class="sections fade-in" aria-label="Noticias de tecnología e IA">
+  <section id="noticias" class="sections fade-in" aria-label="Noticias">
     <div class="section-header">
       <span class="badge">📰 Noticias en fácil</span>
-      <h2 class="section-title" style="margin-top:0.6rem;">Tecnología e IA, sin enredos</h2>
-      <p class="section-subtitle">Actualizaciones cortas: qué cambió, por qué importa y cómo te sirve.</p>
+      <h2 class="section-title" style="margin-top:0.6rem;">Tecnología e IA, explicado sencillo</h2>
+      <p class="section-subtitle">
+        Lo importante, sin palabras raras: qué cambió y por qué te puede servir.
+      </p>
     </div>
 
     <div class="news-list">
@@ -702,15 +639,15 @@
         <div class="news-date">16 FEB</div>
         <div>
           <h3>Tu seguridad es primero</h3>
-          <p>Mejoramos la detección de mensajes sospechosos para que tengas más control y tranquilidad digital.</p>
+          <p>Refinamos ayudas para detectar mensajes sospechosos y reducir el spam.</p>
         </div>
       </a>
 
-      <a href="#" class="news-item" style="border-left-color: var(--accent);" aria-label="Noticia: Comunidad y aprendizaje">
+      <a href="#" class="news-item" style="border-left-color: var(--accent);" aria-label="Noticia: Comunidad">
         <div class="news-date" style="color: var(--accent);">10 FEB</div>
         <div>
-          <h3>Comunidad: aprender acompañado</h3>
-          <p>Estamos creando espacios para adultos que quieren ponerse al día en tecnología, paso a paso y sin afán.</p>
+          <h3>Aprender acompañado</h3>
+          <p>Estamos armando espacios para adultos que quieren ponerse al día con calma y sin afán.</p>
         </div>
       </a>
     </div>
@@ -720,9 +657,10 @@
   <section id="comunidad" class="sections fade-in" aria-label="Comunidad">
     <div class="section-header">
       <span class="badge">👥 Comunidad</span>
-      <h2 class="section-title" style="margin-top:0.6rem;">Adultos que quieren actualizarse</h2>
+      <h2 class="section-title" style="margin-top:0.6rem;">No tienes que aprender solo</h2>
       <p class="section-subtitle">
-        La comunidad es para aprender con calma, compartir dudas y tener apoyo. Sin pena, sin tecnicismos.
+        Somos adultos que queremos entender mejor el mundo digital.
+        Aquí puedes aprender acompañado(a), sin pena y sin apuros.
       </p>
     </div>
 
@@ -730,41 +668,40 @@
       <div class="card">
         <div class="iconbox" style="background:#0EA5E9;">📌</div>
         <h3>Encuentros cortos</h3>
-        <p>Sesiones cortas: “Cómo reconocer estafas”, “IA en fácil”, “Apps útiles para el día a día”.</p>
+        <p>Conversaciones simples: “cómo reconocer estafas”, “apps útiles”, “IA en fácil”.</p>
       </div>
 
       <div class="card">
         <div class="iconbox" style="background:#7C3AED;">🧩</div>
         <h3>Retos suaves</h3>
-        <p>Pequeños retos semanales: aprender una función, practicar una app, mejorar seguridad en el celular.</p>
+        <p>Pequeños retos semanales: aprender una función, practicar una app, ganar confianza.</p>
       </div>
 
       <div class="card">
         <div class="iconbox" style="background:#111827;">🤝</div>
         <h3>Acompañamiento</h3>
-        <p>Si algo te enreda, lo resolvemos contigo: paso a paso, sin afán y con paciencia.</p>
+        <p>Si algo te enreda, lo resolvemos contigo: paso a paso y con paciencia.</p>
       </div>
     </div>
   </section>
 
   <!-- SEMILLERO -->
-  <section id="semillero" class="sections fade-in" aria-label="Semillero de ideas">
+  <section id="semillero" class="sections fade-in" aria-label="Semillero">
     <div class="section-header">
       <span class="badge">💡 Semillero</span>
-      <h2 class="section-title" style="margin-top:0.6rem;">¿Tienes una idea de negocio en tecnología?</h2>
+      <h2 class="section-title" style="margin-top:0.6rem;">¿Tienes una idea?</h2>
       <p class="section-subtitle">
-        Si eres adulto y tienes una idea (apps, juegos, servicios, comunidad), te ayudamos a aterrizarla:
-        qué problema resuelve, para quién es y cómo empezar.
+        Si alguna vez pensaste: “Tengo una idea, pero no sé por dónde empezar”, aquí te ayudamos a darle forma.
       </p>
     </div>
 
     <div class="form-container">
-      <form id="semilleroForm" aria-label="Formulario Semillero">
-        <input type="text" placeholder="Tu nombre o el nombre de tu idea/proyecto" class="form-control" required>
-        <input type="email" placeholder="Correo para contactarte" class="form-control" required>
+      <form id="semilleroForm" aria-label="Formulario de contacto">
+        <input type="text" placeholder="Tu nombre o el nombre de tu idea" class="form-control" required>
+        <input type="email" placeholder="Tu correo (para responderte)" class="form-control" required>
 
-        <select class="form-control" aria-label="Interés principal">
-          <option>Quiero mejorar mi seguridad digital (apps)</option>
+        <select class="form-control" aria-label="Qué necesitas">
+          <option>Quiero mejorar mi seguridad digital</option>
           <option>Quiero aprender tecnología/IA en fácil</option>
           <option>Tengo una idea de juego para memoria/bienestar</option>
           <option>Tengo una idea de negocio en tecnología</option>
@@ -772,24 +709,25 @@
         </select>
 
         <textarea
-          placeholder="Cuéntanos: ¿qué quieres lograr?, ¿qué te preocupa?, ¿qué idea tienes? Entre más claro, mejor."
+          placeholder="Cuéntanos con tus palabras qué necesitas o cuál es tu idea. Entre más claro, mejor 🙂"
           class="form-control" rows="4" required></textarea>
 
-        <button type="submit" class="submit-btn">Solicitar orientación</button>
+        <button type="submit" class="submit-btn">Pedir ayuda</button>
 
-        <p style="margin-top: 0.75rem; color: var(--muted); font-size: 0.95rem;">
-          *Te contactaremos por correo. No compartimos tu información con terceros.
+        <p class="small-note">
+          *Te contactamos por correo. No compartimos tu información con terceros.
         </p>
       </form>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     <div class="footer-content">
       <div>
         <h3 style="color: #E6EAF2; font-family: 'Archivo Black'; letter-spacing: 1px;">GUTIGU</h3>
         <p style="margin-top: 0.75rem;">
-          Tecnología pensada para adultos. Acompañamiento claro, desde Colombia para el mundo.
+          Tecnología pensada para adultos. Explicada con calma, con respeto y sin enredos.
         </p>
       </div>
 
@@ -815,7 +753,7 @@
   </footer>
 
   <script>
-    // Animaciones al bajar página
+    // Animaciones suaves al bajar
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) entry.target.classList.add('visible');
@@ -824,7 +762,7 @@
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-    // Formulario
+    // Formulario (demo)
     const form = document.getElementById('semilleroForm');
     form.addEventListener('submit', function(e) {
       e.preventDefault();
@@ -835,8 +773,8 @@
       setTimeout(() => {
         this.innerHTML = `
           <div style="text-align: center; padding: 1.5rem; border: 1px solid rgba(22,101,52,0.35); border-radius: 16px; color: #E6EAF2; background:#0B1220;">
-            <h3 style="margin-bottom:0.75rem;">¡Listo! Mensaje recibido</h3>
-            <p style="opacity:0.9;">Recibimos tu información. Pronto alguien del equipo te escribe para orientar tu caso.</p>
+            <h3 style="margin-bottom:0.75rem;">¡Listo! Ya lo recibimos</h3>
+            <p style="opacity:0.9;">Gracias por escribirnos. Pronto alguien del equipo te responde con calma y paso a paso.</p>
             <button onclick="location.reload()"
               style="margin-top:1.25rem; background:transparent; border:1px solid rgba(230,234,242,0.55); color:#E6EAF2;
               padding:0.75rem 1rem; cursor:pointer; border-radius:14px; min-height:48px;">
@@ -846,7 +784,7 @@
       }, 1200);
     });
 
-    // Juego Mente Maestra
+    // Juego de memoria
     const icons = ['🛡️', '🎮', '🤖', '⚡', '🧠', '💾', '🛡️', '🎮', '🤖', '⚡', '🧠', '💾'];
     let flippedCards = [];
     let matchedPairs = 0;
@@ -904,7 +842,7 @@
         flippedCards = [];
 
         if (matchedPairs === icons.length / 2) {
-          setTimeout(() => alert(`¡Excelente! Terminaste el ejercicio con ${attempts} intentos.`), 400);
+          setTimeout(() => alert(`¡Muy bien! Terminaste el ejercicio con ${attempts} intentos.`), 400);
         }
       } else {
         setTimeout(() => {
@@ -936,63 +874,6 @@
         if (target) target.scrollIntoView({ behavior: 'smooth' });
       });
     });
-
-    // CHAT (UI lista para conectar)
-    const chatBody = document.getElementById('chatBody');
-    const chatInput = document.getElementById('chatInput');
-
-    function addMsg(text, role) {
-      const div = document.createElement('div');
-      div.className = `msg ${role}`;
-      div.textContent = text;
-      chatBody.appendChild(div);
-      chatBody.scrollTop = chatBody.scrollHeight;
-    }
-
-    function clearChat() {
-      chatBody.innerHTML = '';
-      addMsg('Hola 😊 Soy tu asistente. Escribe una pregunta como: “¿Cómo bloqueo mensajes spam?” o “Explícame qué es IA en sencillo”.', 'assistant');
-      addMsg('Nota: este chat está listo para conectarse a un endpoint seguro (sin poner claves en la página).', 'assistant');
-    }
-
-    async function sendMessage() {
-      const text = (chatInput.value || '').trim();
-      if (!text) return;
-
-      addMsg(text, 'user');
-      chatInput.value = '';
-
-      // Respuesta temporal (hasta que conectes un endpoint real)
-      addMsg('Estoy listo para responder. Para conectarme a ChatGPT dentro de tu web, configura un endpoint /api/chat en tu servidor.\n\nPor ahora, usa “Abrir ChatGPT” si quieres respuesta inmediata.', 'assistant');
-
-      /*
-        ✅ Integración real (recomendado):
-        - Crea un endpoint en tu servidor: POST /api/chat
-        - Recibe { message: "..." }
-        - Tu servidor llama a OpenAI y devuelve { reply: "..." }
-
-        Luego reemplaza el bloque anterior por:
-
-        try {
-          const res = await fetch('/api/chat', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ message: text })
-          });
-          const data = await res.json();
-          addMsg(data.reply || 'No pude responder en este momento.', 'assistant');
-        } catch (err) {
-          addMsg('En este momento el chat no está disponible. Puedes usar “Abrir ChatGPT”.', 'assistant');
-        }
-      */
-    }
-
-    // Enter para enviar
-    if (chatInput) {
-      chatInput.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter') sendMessage();
-      });
-    }
   </script>
 </body>
 </html>

@@ -1,361 +1,998 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GUTIGU - Innovación Digital: IA, Juegos y Emprendimiento</title>
-    
-    <meta name="description" content="Ecosistema digital en Colombia. Soluciones de ciberseguridad con IA, desarrollo de videojuegos y semillero de emprendedores.">
-    <meta name="author" content="GUTIGU">
-    <meta name="robots" content="index, follow">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://gutigu.com/">
-    <meta property="og:title" content="GUTIGU - Innovación Digital que Transforma">
-    <meta property="og:description" content="Descubre videojuegos, soluciones de IA y nuestro semillero de emprendedores. Hecho en Colombia.">
-    <meta property="og:image" content="https://gutigu.com/img/og-image.jpg">
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="icon" type="image/png" href="favicon-gutigu.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GUTIGU - Tecnología clara para adultos (50+)</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Archivo+Black&display=swap" rel="stylesheet">
-    
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+  <meta name="description" content="Apps, juegos de memoria, chat asistido y noticias de IA explicadas en fácil. Comunidad y semillero para ideas de negocio en tecnología en Colombia.">
+  <meta name="author" content="GUTIGU">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gutigu.com/">
+  <meta property="og:title" content="GUTIGU - Tecnología clara para adultos (50+)">
+  <meta property="og:description" content="Apps (Guardian Digital), juegos de memoria, chat/asistente y noticias de IA en fácil. Comunidad y semillero.">
+  <meta property="og:image" content="https://gutigu.com/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="favicon-gutigu.png">
 
-        :root {
-            --neon-blue: #00F0FF;
-            --neon-pink: #FF006E;
-            --neon-yellow: #FFD60A;
-            --neon-green: #39ff14;
-            --dark-bg: #0A0E27;
-            --darker: #050814;
-            --card-bg: #131729;
-            --text-primary: #E8F1F5;
-            --text-secondary: #8B9BB4;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Archivo+Black&display=swap" rel="stylesheet">
 
-        body {
-            font-family: 'Space Mono', monospace;
-            color: var(--text-primary);
-            background: var(--dark-bg);
-            overflow-x: hidden;
-            line-height: 1.6;
-        }
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        /* Background & Grid */
-        .bg-animation {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
-            background: radial-gradient(circle at 20% 30%, rgba(0, 240, 255, 0.08) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 70%, rgba(255, 0, 110, 0.08) 0%, transparent 50%);
-            animation: pulse 15s ease-in-out infinite;
-        }
-        @keyframes pulse { 0%, 100% { opacity: 0.6; } 50% { opacity: 1; } }
-        
-        .grid-overlay {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background-image: linear-gradient(rgba(0, 240, 255, 0.03) 1px, transparent 1px),
-                              linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
-            background-size: 50px 50px; z-index: -1; pointer-events: none;
-        }
+    :root {
+      --bg: #F7F8FA;
+      --bg-soft: #FFFFFF;
+      --surface: #FFFFFF;
+      --surface-2: #F1F3F6;
 
-        header {
-            position: fixed; top: 0; width: 100%; background: rgba(10, 14, 39, 0.9);
-            backdrop-filter: blur(20px); z-index: 1000; border-bottom: 1px solid rgba(0, 240, 255, 0.2);
-        }
-        nav { max-width: 1400px; margin: 0 auto; padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-family: 'Archivo Black', sans-serif; font-size: 2rem; color: var(--neon-blue); text-shadow: 0 0 20px rgba(0, 240, 255, 0.5); text-decoration: none; }
-        .nav-links { display: flex; gap: 2rem; list-style: none; }
-        .nav-links a { text-decoration: none; color: var(--text-secondary); font-weight: 700; text-transform: uppercase; font-size: 0.8rem; transition: 0.3s; }
-        .nav-links a:hover { color: var(--neon-blue); }
+      --text: #101828;
+      --text-soft: #344054;
+      --muted: #667085;
 
-        .hero { margin-top: 90px; padding: 8rem 2rem; text-align: left; max-width: 1400px; margin-left: auto; margin-right: auto; }
-        .hero h1 { font-family: 'Archivo Black', sans-serif; font-size: 4.5rem; line-height: 1; margin-bottom: 2rem; background: linear-gradient(135deg, var(--neon-blue), var(--neon-pink), var(--neon-yellow)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .hero-glitch { color: var(--text-secondary); display: block; margin-bottom: 1rem; }
+      --primary: #1D4ED8;
+      --primary-2: #0B63CE;
+      --accent: #0F766E;
+      --warning: #B45309;
+      --success: #166534;
 
-        .categories, .blog-section { padding: 6rem 2rem; max-width: 1400px; margin: 0 auto; }
-        .section-header { text-align: center; margin-bottom: 4rem; }
-        .section-title { font-family: 'Archivo Black', sans-serif; font-size: 3rem; background: linear-gradient(135deg, var(--neon-blue), var(--neon-yellow)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 1rem; }
-        .section-subtitle { color: var(--text-secondary); }
+      --border: #D0D5DD;
+      --shadow: 0 10px 30px rgba(16, 24, 40, 0.08);
+      --radius: 16px;
+    }
 
-        .category-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-        .category-card { background: var(--card-bg); border: 1px solid rgba(0, 240, 255, 0.2); padding: 2.5rem; transition: 0.4s; }
-        .category-card:hover { transform: translateY(-10px); border-color: var(--neon-blue); box-shadow: 0 10px 40px rgba(0, 240, 255, 0.2); }
-        .category-icon { width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; font-size: 1.5rem; font-weight: bold; color: white; border-radius: 10px; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Space Mono", monospace;
+      color: var(--text);
+      background: var(--bg);
+      overflow-x: hidden;
+      line-height: 1.7;
+      font-size: 18px;
+    }
 
-        /* Estilos del Juego Mente Maestra */
-        .game-stats { display: flex; justify-content: center; gap: 3rem; margin-bottom: 2rem; font-family: 'Archivo Black', sans-serif; }
-        .game-container { max-width: 600px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
-        .memory-card { aspect-ratio: 1 / 1; background: var(--card-bg); border: 2px solid var(--neon-blue); display: flex; align-items: center; justify-content: center; font-size: 2.5rem; cursor: pointer; transition: all 0.3s ease; user-select: none; }
-        .memory-card.flipped { border-color: var(--neon-yellow); background: var(--darker); }
-        .memory-card.matched { border-color: var(--neon-green); box-shadow: 0 0 15px var(--neon-green); opacity: 0.7; cursor: default; }
+    :focus-visible {
+      outline: 3px solid rgba(29, 78, 216, 0.35);
+      outline-offset: 3px;
+      border-radius: 10px;
+    }
 
-        .blog-grid { display: flex; flex-direction: column; gap: 1.5rem; }
-        .blog-post { display: flex; background: rgba(19, 23, 41, 0.6); border-left: 4px solid var(--neon-pink); padding: 1.5rem; text-decoration: none; color: inherit; transition: 0.3s; }
-        .blog-post:hover { background: rgba(255, 0, 110, 0.1); transform: translateX(10px); }
+    .bg-animation {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -2;
+      background:
+        radial-gradient(circle at 15% 25%, rgba(29, 78, 216, 0.10) 0%, transparent 55%),
+        radial-gradient(circle at 85% 70%, rgba(15, 118, 110, 0.10) 0%, transparent 55%);
+    }
 
-        .form-container { background: var(--card-bg); border: 2px solid var(--neon-blue); padding: 2.5rem; max-width: 800px; margin: 2rem auto; }
-        .form-control { width: 100%; padding: 1rem; background: var(--darker); border: 1px solid var(--text-secondary); color: white; font-family: 'Space Mono', monospace; margin-bottom: 1rem; }
-        .form-control:focus { outline: none; border-color: var(--neon-pink); }
-        .submit-btn { width: 100%; padding: 1rem; background: transparent; border: 2px solid var(--neon-yellow); color: var(--neon-yellow); cursor: pointer; font-weight: bold; letter-spacing: 2px; }
-        .submit-btn:hover { background: var(--neon-yellow); color: var(--dark-bg); box-shadow: 0 0 20px rgba(255, 214, 10, 0.4); }
+    .grid-overlay {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background-image:
+        linear-gradient(rgba(16, 24, 40, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(16, 24, 40, 0.03) 1px, transparent 1px);
+      background-size: 80px 80px;
+      z-index: -1;
+      pointer-events: none;
+    }
 
-        .success-message { display: none; text-align: center; padding: 2rem; border: 2px solid var(--neon-green); color: var(--neon-green); margin-top: 1rem; animation: glitch-border 0.5s infinite; }
-        @keyframes glitch-border { 0%, 100% { border-color: var(--neon-green); } 50% { border-color: var(--neon-blue); } }
-        .glitch-text { font-size: 1.5rem; font-weight: bold; text-shadow: 2px 2px var(--neon-pink), -2px -2px var(--neon-blue); }
+    header {
+      position: fixed; top: 0; width: 100%;
+      background: rgba(247, 248, 250, 0.92);
+      backdrop-filter: blur(16px);
+      z-index: 1000;
+      border-bottom: 1px solid var(--border);
+    }
 
-        .fade-in { opacity: 0; transform: translateY(30px); transition: 0.6s all ease; }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
 
-        footer { background: var(--darker); padding: 4rem 2rem 2rem; border-top: 1px solid rgba(0, 240, 255, 0.2); margin-top: 4rem; }
-        .footer-content { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem; }
-        .cta-button { padding: 0.8rem 1.5rem; background: transparent; border: 1px solid var(--neon-blue); color: var(--neon-blue); cursor: pointer; font-family: 'Space Mono'; transition: 0.3s; }
-        .cta-button:hover { background: var(--neon-blue); color: var(--dark-bg); }
-    </style>
+    .logo {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 1.8rem;
+      color: var(--primary);
+      text-decoration: none;
+      letter-spacing: 1px;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 0.5rem;
+      list-style: none;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-soft);
+      font-weight: 800;
+      font-size: 0.95rem;
+      padding: 0.55rem 0.7rem;
+      border-radius: 12px;
+      transition: 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      background: var(--surface-2);
+      color: var(--text);
+    }
+
+    .hero {
+      margin-top: 84px;
+      padding: 4.5rem 1.25rem 3rem;
+      text-align: left;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-kicker {
+      color: var(--muted);
+      display: block;
+      margin-bottom: 1rem;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+      font-size: 1rem;
+    }
+
+    .hero h1 {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+      color: var(--text);
+    }
+
+    .hero p {
+      max-width: 900px;
+      color: var(--text-soft);
+      font-size: 1.1rem;
+    }
+
+    .hero-cta {
+      margin-top: 1.75rem;
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0.85rem 1.1rem;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      cursor: pointer;
+      font-weight: 900;
+      text-decoration: none;
+      transition: 0.2s ease;
+      user-select: none;
+    }
+
+    .btn:hover { transform: translateY(-1px); box-shadow: var(--shadow); }
+    .btn-primary { background: var(--primary); border-color: var(--primary); color: #fff; }
+    .btn-primary:hover { background: var(--primary-2); }
+    .btn-ghost { background: transparent; }
+    .btn-accent { background: var(--accent); border-color: var(--accent); color:#fff; }
+    .btn-accent:hover { filter: brightness(0.95); }
+
+    .sections { padding: 3.5rem 1.25rem; max-width: 1200px; margin: 0 auto; }
+    .section-header { text-align: left; margin-bottom: 1.75rem; }
+    .section-title { font-family: 'Archivo Black', sans-serif; font-size: 2rem; color: var(--text); margin-bottom: 0.5rem; }
+    .section-subtitle { color: var(--muted); font-size: 1.05rem; max-width: 920px; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 1.6rem;
+      border-radius: var(--radius);
+      box-shadow: 0 1px 0 rgba(16,24,40,0.03);
+      transition: 0.2s ease;
+    }
+    .card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+    .card h3 { margin-bottom: 0.5rem; color: var(--text); font-size: 1.2rem; }
+    .card p { color: var(--text-soft); font-size: 1.02rem; }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.35rem 0.65rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--surface-2);
+      color: var(--text-soft);
+      font-weight: 900;
+      font-size: 0.9rem;
+    }
+
+    .iconbox {
+      width: 56px; height: 56px;
+      display:flex; align-items:center; justify-content:center;
+      border-radius: 14px; color:#fff; font-weight: 900;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 1.25rem;
+      align-items: start;
+    }
+
+    .checklist { margin-top: 0.75rem; padding-left: 1.1rem; color: var(--text-soft); }
+    .checklist li { margin: 0.35rem 0; }
+
+    .callout {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.4rem;
+      box-shadow: var(--shadow);
+    }
+
+    /* Juego */
+    .game-stats {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 1.25rem 0 1rem;
+      font-family: 'Archivo Black', sans-serif;
+      flex-wrap: wrap;
+    }
+
+    .game-container {
+      max-width: 640px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .memory-card {
+      aspect-ratio: 1 / 1;
+      background: var(--surface);
+      border: 2px solid var(--border);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      user-select: none;
+      min-height: 64px;
+    }
+
+    .memory-card:hover { transform: translateY(-1px); box-shadow: var(--shadow); }
+    .memory-card.flipped { border-color: rgba(29, 78, 216, 0.65); background: var(--surface-2); }
+    .memory-card.matched { border-color: rgba(15, 118, 110, 0.65); box-shadow: 0 0 0 4px rgba(15, 118, 110, 0.12); opacity: 0.85; cursor: default; }
+
+    /* Noticias */
+    .news-list { display: flex; flex-direction: column; gap: 1rem; }
+    .news-item {
+      display: flex;
+      gap: 1rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 8px solid var(--primary);
+      padding: 1.25rem;
+      border-radius: var(--radius);
+      text-decoration: none;
+      color: inherit;
+      transition: 0.2s ease;
+    }
+    .news-item:hover { box-shadow: var(--shadow); transform: translateY(-1px); }
+    .news-date { min-width: 110px; color: var(--primary); font-weight: 900; font-size: 1rem; }
+    .news-item h3 { margin-bottom: 0.25rem; font-size: 1.2rem; color: var(--text); }
+    .news-item p { color: var(--text-soft); font-size: 1.02rem; }
+
+    /* Chat */
+    .chat-shell {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .chat-header {
+      padding: 1rem 1.1rem;
+      background: var(--surface-2);
+      border-bottom: 1px solid var(--border);
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .chat-title {
+      font-weight: 1000;
+      color: var(--text);
+      display:flex;
+      align-items:center;
+      gap: 0.6rem;
+    }
+
+    .chat-body {
+      height: 360px;
+      overflow-y: auto;
+      padding: 1rem;
+      display:flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      background: linear-gradient(180deg, #fff 0%, #fbfcff 100%);
+    }
+
+    .msg {
+      max-width: 90%;
+      padding: 0.75rem 0.9rem;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      line-height: 1.55;
+      font-size: 1.02rem;
+      white-space: pre-wrap;
+    }
+
+    .msg.user {
+      margin-left: auto;
+      background: rgba(29, 78, 216, 0.07);
+      border-color: rgba(29, 78, 216, 0.18);
+    }
+
+    .msg.assistant {
+      margin-right: auto;
+      background: rgba(15, 118, 110, 0.06);
+      border-color: rgba(15, 118, 110, 0.18);
+    }
+
+    .chat-footer {
+      padding: 1rem;
+      border-top: 1px solid var(--border);
+      display:flex;
+      gap: 0.6rem;
+      align-items: center;
+      background: var(--surface);
+      flex-wrap: wrap;
+    }
+
+    .chat-input {
+      flex: 1 1 260px;
+      min-height: 48px;
+      padding: 0.85rem 0.95rem;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      font-size: 1.05rem;
+      color: var(--text);
+      background: var(--bg-soft);
+    }
+
+    .chat-input:focus { outline: none; border-color: rgba(29, 78, 216, 0.55); box-shadow: 0 0 0 4px rgba(29, 78, 216, 0.10); }
+
+    .small-note { margin-top: 0.75rem; color: var(--muted); font-size: 0.98rem; }
+
+    /* Form */
+    .form-container {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 1.75rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      max-width: 860px;
+      margin: 1.25rem auto 0;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 0.95rem 1rem;
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      color: var(--text);
+      font-size: 1.05rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .form-control::placeholder { color: #98A2B3; }
+    .form-control:focus { outline: none; border-color: rgba(29, 78, 216, 0.55); box-shadow: 0 0 0 4px rgba(29, 78, 216, 0.10); }
+
+    .submit-btn {
+      width: 100%;
+      min-height: 52px;
+      padding: 1rem 1.25rem;
+      background: var(--primary);
+      border: 1px solid var(--primary);
+      color: #fff;
+      cursor: pointer;
+      font-weight: 950;
+      letter-spacing: 0.2px;
+      font-size: 1.05rem;
+      border-radius: 14px;
+      transition: 0.2s ease;
+    }
+
+    .submit-btn:hover { background: var(--primary-2); box-shadow: var(--shadow); }
+    .submit-btn:disabled { opacity: 0.7; cursor: not-allowed; }
+
+    .fade-in { opacity: 0; transform: translateY(18px); transition: 0.45s all ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    footer {
+      background: #0B1220;
+      color: #E6EAF2;
+      padding: 3.5rem 1.25rem 1.75rem;
+      border-top: 1px solid rgba(255,255,255,0.10);
+      margin-top: 3rem;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .footer-content p, .footer-content a { color: rgba(230,234,242,0.80); }
+
+    @media (max-width: 900px) {
+      .two-col { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 720px) {
+      .footer-content { grid-template-columns: 1fr; }
+      .news-date { min-width: 90px; }
+      .game-container { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (max-width: 420px) {
+      body { font-size: 17px; }
+      .game-container { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
 </head>
+
 <body>
-    <div class="bg-animation"></div>
-    <div class="grid-overlay"></div>
+  <div class="bg-animation"></div>
+  <div class="grid-overlay"></div>
 
-    <header>
-        <nav>
-            <a href="#" class="logo">GUTIGU</a>
-            <ul class="nav-links">
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#videojuegos">Juegos</a></li>
-                <li><a href="#bitacora">Bitácora</a></li>
-                <li><a href="#registro">Semillero</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <nav>
+      <a href="#" class="logo" aria-label="Inicio GUTIGU">GUTIGU</a>
+      <ul class="nav-links" aria-label="Menú principal">
+        <li><a href="#oferta">Oferta</a></li>
+        <li><a href="#apps">Apps</a></li>
+        <li><a href="#juegos">Juegos</a></li>
+        <li><a href="#chat">Chat</a></li>
+        <li><a href="#noticias">Noticias</a></li>
+        <li><a href="#comunidad">Comunidad</a></li>
+        <li><a href="#semillero">Semillero</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <section class="hero">
-        <span class="hero-glitch">// INNOVACIÓN DIGITAL COLOMBIANA</span>
-        <h1>TRANSFORMAMOS<br>IDEAS EN<br>EXPERIENCIAS</h1>
-        <p style="max-width: 700px; color: var(--text-secondary); font-size: 1.1rem;">
-            Ecosistema dedicado a la Inteligencia Artificial, el desarrollo de videojuegos y el impulso de nuevos emprendedores.
+  <!-- HERO -->
+  <section class="hero" aria-label="Presentación">
+    <span class="hero-kicker">Tecnología para adultos (50+): clara, útil y sin afán.</span>
+    <h1>Apps, juegos, noticias y un asistente para conversar.<br>Todo en un solo lugar.</h1>
+    <p>
+      En GUTIGU ayudamos a adultos a mantenerse actualizados en tecnología e IA con herramientas prácticas:
+      <strong>apps de seguridad</strong> (como Guardian Digital), <strong>juegos para memoria</strong>, <strong>noticias en fácil</strong>,
+      <strong>un chat/asistente</strong> para preguntar lo que necesites y una <strong>comunidad</strong> para aprender acompañado(a).
+    </p>
+
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#apps">Ver apps</a>
+      <a class="btn btn-accent" href="#chat">Abrir chat</a>
+      <a class="btn btn-ghost" href="#semillero">Tengo una idea</a>
+    </div>
+  </section>
+
+  <!-- OFERTA -->
+  <section id="oferta" class="sections fade-in">
+    <div class="section-header">
+      <h2 class="section-title">¿Qué ofrecemos?</h2>
+      <p class="section-subtitle">
+        Un ecosistema pensado para adultos: seguridad, aprendizaje, acompañamiento y bienestar mental, con un lenguaje claro.
+      </p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="iconbox" style="background: var(--accent);">🛡️</div>
+        <h3>Apps para tu tranquilidad</h3>
+        <p>Herramientas como <strong>Guardian Digital</strong> para ayudar a bloquear SMS spam y reducir mensajes sospechosos.</p>
+      </div>
+
+      <div class="card">
+        <div class="iconbox" style="background: var(--primary);">🧠</div>
+        <h3>Juegos para memoria</h3>
+        <p>Ejercicios cortos para entrenar atención y memoria. Sencillos, sin presión y agradables.</p>
+      </div>
+
+      <div class="card">
+        <div class="iconbox" style="background: var(--warning);">🤖</div>
+        <h3>Chat/Asistente</h3>
+        <p>Un espacio para escribir y preguntar lo que necesites. Ideal si estás aprendiendo o quieres resolver dudas.</p>
+      </div>
+
+      <div class="card">
+        <div class="iconbox" style="background: #7C3AED;">📰</div>
+        <h3>Noticias de tecnología e IA</h3>
+        <p>Actualizaciones en fácil: qué cambió, por qué importa y cómo te sirve (sin tecnicismos).</p>
+      </div>
+
+      <div class="card">
+        <div class="iconbox" style="background: #0EA5E9;">👥</div>
+        <h3>Comunidad</h3>
+        <p>Adultos que quieren actualizarse, compartir aprendizajes y avanzar acompañados.</p>
+      </div>
+
+      <div class="card">
+        <div class="iconbox" style="background: #111827;">💡</div>
+        <h3>Semillero</h3>
+        <p>Si tienes una idea de negocio relacionada con tecnología, te ayudamos a aterrizarla paso a paso.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPS -->
+  <section id="apps" class="sections fade-in" aria-label="Apps">
+    <div class="section-header">
+      <span class="badge">🛡️ Apps para adultos</span>
+      <h2 class="section-title" style="margin-top:0.6rem;">Guardian Digital</h2>
+      <p class="section-subtitle">
+        Una app pensada para ayudarte a <strong>bloquear SMS spam</strong> y detectar mensajes sospechosos. Menos ruido, menos riesgos.
+      </p>
+    </div>
+
+    <div class="two-col">
+      <div class="card">
+        <h3>¿Qué hace Guardian Digital?</h3>
+        <p>
+          Ayuda a filtrar mensajes molestos o peligrosos (por ejemplo: ofertas insistentes, enlaces raros o mensajes que te meten afán).
+          La meta es que tengas <strong>más tranquilidad</strong> al usar tu celular.
         </p>
-    </section>
 
-    <section id="nosotros" class="categories">
-        <div class="section-header fade-in">
-            <h2 class="section-title">SOBRE GUTIGU</h2>
-            <p class="section-subtitle">El punto de encuentro entre la tecnología y el impacto real.</p>
-        </div>
-        <div class="category-grid">
-            <div class="category-card fade-in">
-                <div class="category-icon" style="background: var(--neon-pink);">01</div>
-                <h3>Innovación IA</h3>
-                <p>La IA no es una amenaza, sino el lienzo más potente para la creatividad humana.</p>
-            </div>
-            <div class="category-card fade-in">
-                <div class="category-icon" style="background: var(--neon-yellow);">02</div>
-                <h3>Colaboración</h3>
-                <p>El código se comparte y los éxitos se celebran en comunidad dentro de nuestro semillero.</p>
-            </div>
-            <div class="category-card fade-in">
-                <div class="category-icon" style="background: var(--neon-blue);">03</div>
-                <h3>Acción MVP</h3>
-                <p>No buscamos la perfección de entrada, buscamos la evolución constante y real.</p>
-            </div>
-        </div>
-    </section>
+        <ul class="checklist" aria-label="Funciones principales">
+          <li><strong>Bloqueo de SMS spam</strong> (publicidad repetitiva / mensajes molestos).</li>
+          <li><strong>Alertas</strong> cuando un SMS tiene señales típicas de estafa.</li>
+          <li><strong>Recomendaciones claras</strong>: “qué hacer” y “qué evitar”.</li>
+        </ul>
 
-    <section id="videojuegos" class="categories fade-in">
-        <div class="section-header">
-            <h2 class="section-title">MENTE MAESTRA</h2>
-            <p class="section-subtitle">Un prototipo de juego para fortalecer la memoria en adultos mayores.</p>
+        <div class="hero-cta" style="margin-top:1rem;">
+          <a class="btn btn-primary" href="#semillero">Quiero apoyo para instalar/configurar</a>
+          <a class="btn btn-ghost" href="#chat">Preguntarle al asistente</a>
         </div>
 
-        <div class="game-stats">
-            <div style="text-align: center;">
-                <p style="color: var(--text-secondary); font-size: 0.7rem; text-transform: uppercase;">Puntos</p>
-                <span id="score" style="color: var(--neon-green); font-size: 2rem;">0</span>
-            </div>
-            <div style="text-align: center;">
-                <p style="color: var(--text-secondary); font-size: 0.7rem; text-transform: uppercase;">Intentos</p>
-                <span id="attempts" style="color: var(--neon-blue); font-size: 2rem;">0</span>
-            </div>
+        <p class="small-note">
+          Nota: la seguridad perfecta no existe, pero sí se puede reducir muchísimo el riesgo combinando filtros + buenos hábitos.
+        </p>
+      </div>
+
+      <div class="callout">
+        <h3>Consejos rápidos contra SMS spam</h3>
+        <ul class="checklist">
+          <li>No abras enlaces si el mensaje te mete afán (“último aviso”).</li>
+          <li>No compartas códigos (OTP) ni contraseñas.</li>
+          <li>Si dice ser tu banco/entidad, confirma por el canal oficial.</li>
+          <li>Bloquea y reporta el número si es spam.</li>
+        </ul>
+        <p class="small-note">Si quieres, te ayudamos a dejar todo configurado paso a paso.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- JUEGOS -->
+  <section id="juegos" class="sections fade-in" aria-label="Juegos de memoria">
+    <div class="section-header">
+      <span class="badge">🧠 Juegos para adultos</span>
+      <h2 class="section-title" style="margin-top:0.6rem;">Mente maestra</h2>
+      <p class="section-subtitle">Ejercicio corto para entrenar atención y memoria. Sin presión: solo práctica.</p>
+    </div>
+
+    <div class="game-stats" aria-label="Estadísticas del ejercicio">
+      <div style="text-align: center;">
+        <p style="color: var(--muted); font-size: 0.95rem;">Puntuación</p>
+        <span id="score" style="color: var(--success); font-size: 2.2rem;">0</span>
+      </div>
+      <div style="text-align: center;">
+        <p style="color: var(--muted); font-size: 0.95rem;">Intentos</p>
+        <span id="attempts" style="color: var(--primary); font-size: 2.2rem;">0</span>
+      </div>
+    </div>
+
+    <div id="game-board" class="game-container" aria-label="Tablero del ejercicio"></div>
+
+    <div style="text-align: center; margin-top: 1.75rem;">
+      <button onclick="resetGame()" class="btn btn-ghost">Reiniciar ejercicio</button>
+    </div>
+  </section>
+
+  <!-- CHAT -->
+  <section id="chat" class="sections fade-in" aria-label="Chat con asistente">
+    <div class="section-header">
+      <span class="badge">🤖 Chat / Asistente</span>
+      <h2 class="section-title" style="margin-top:0.6rem;">Habla o escribe con un asistente</h2>
+      <p class="section-subtitle">
+        Para resolver dudas, aprender paso a paso o simplemente conversar. Incluimos “Chat con ChatGPT” en dos modos:
+        <strong>abrir ChatGPT</strong> o <strong>chat integrado</strong> (conexión segura desde tu servidor).
+      </p>
+    </div>
+
+    <div class="two-col">
+      <div class="chat-shell" role="region" aria-label="Chat integrado (demo)">
+        <div class="chat-header">
+          <div class="chat-title">💬 Chat integrado (demo)</div>
+          <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+            <button class="btn btn-ghost" type="button" onclick="clearChat()">Limpiar</button>
+            <a class="btn btn-primary" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">Abrir ChatGPT</a>
+          </div>
         </div>
 
-        <div id="game-board" class="game-container"></div>
-        
-        <div style="text-align: center; margin-top: 2.5rem;">
-            <button onclick="resetGame()" class="cta-button">Reiniciar Ejercicio</button>
+        <div id="chatBody" class="chat-body" aria-label="Mensajes del chat">
+          <div class="msg assistant">
+            Hola 😊 Soy tu asistente. Escribe una pregunta como:
+            “¿Cómo bloqueo mensajes spam?” o “Explícame qué es IA en sencillo”.
+          </div>
+          <div class="msg assistant">
+            Nota: este chat está listo para conectarse a un endpoint seguro (sin poner claves en la página).
+          </div>
         </div>
-    </section>
 
-    <section id="bitacora" class="blog-section fade-in">
-        <div class="section-header">
-            <h2 class="section-title">BITÁCORA</h2>
-            <p class="section-subtitle">Actualizaciones de sistema y hitos del equipo.</p>
+        <div class="chat-footer">
+          <input id="chatInput" class="chat-input" type="text" placeholder="Escribe aquí tu pregunta..." aria-label="Entrada de mensaje">
+          <button class="btn btn-accent" type="button" onclick="sendMessage()">Enviar</button>
         </div>
-        <div class="blog-grid">
-            <a href="#" class="blog-post">
-                <div style="min-width: 100px; color: var(--neon-pink); font-weight: bold;">16 FEB</div>
-                <div>
-                    <h3>Guardian Digital: Optimización IA</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Mejoramos la detección de Phishing reduciendo falsos positivos en un 15%.</p>
-                </div>
-            </a>
-            <a href="#" class="blog-post" style="border-left-color: var(--neon-blue);">
-                <div style="min-width: 100px; color: var(--neon-blue); font-weight: bold;">10 FEB</div>
-                <div>
-                    <h3>Primeros brotes del Semillero</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Damos la bienvenida a dos nuevos equipos de emprendedores digitales.</p>
-                </div>
-            </a>
+      </div>
+
+      <div class="callout" aria-label="Cómo funciona el chat con ChatGPT">
+        <h3>¿Cómo lo dejamos funcionando con ChatGPT?</h3>
+        <p style="color: var(--text-soft); margin-top: 0.5rem;">
+          Por seguridad, <strong>no se debe</strong> poner una API key dentro del HTML. Lo correcto es:
+        </p>
+        <ul class="checklist">
+          <li>Tu web llama a <strong>/api/chat</strong> (en tu servidor).</li>
+          <li>Tu servidor llama al modelo de OpenAI con tu API key.</li>
+          <li>El servidor devuelve la respuesta a la página.</li>
+        </ul>
+        <p class="small-note">
+          Si por ahora quieres algo simple, usa el botón <strong>“Abrir ChatGPT”</strong> y listo.
+        </p>
+        <div class="hero-cta" style="margin-top:0.75rem;">
+          <a class="btn btn-primary" href="#semillero">Quiero que lo integren</a>
+          <a class="btn btn-ghost" href="#apps">Volver a apps</a>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section id="registro" class="categories fade-in">
-        <div class="section-header">
-            <h2 class="section-title">ÚNETE AL SEMILLERO</h2>
-            <p class="section-subtitle">Envía tu idea de IA, App o Videojuego al sistema.</p>
+  <!-- NOTICIAS -->
+  <section id="noticias" class="sections fade-in" aria-label="Noticias de tecnología e IA">
+    <div class="section-header">
+      <span class="badge">📰 Noticias en fácil</span>
+      <h2 class="section-title" style="margin-top:0.6rem;">Tecnología e IA, sin enredos</h2>
+      <p class="section-subtitle">Actualizaciones cortas: qué cambió, por qué importa y cómo te sirve.</p>
+    </div>
+
+    <div class="news-list">
+      <a href="#" class="news-item" aria-label="Noticia: Tu seguridad es primero">
+        <div class="news-date">16 FEB</div>
+        <div>
+          <h3>Tu seguridad es primero</h3>
+          <p>Mejoramos la detección de mensajes sospechosos para que tengas más control y tranquilidad digital.</p>
         </div>
-        <div class="form-container">
-            <form id="semilleroForm">
-                <input type="text" placeholder="Nombre del Equipo / Emprendedor" class="form-control" required>
-                <input type="email" placeholder="Email de Contacto" class="form-control" required>
-                <select class="form-control">
-                    <option>Solución de IA</option>
-                    <option>Videojuego para Adultos Mayores</option>
-                    <option>App de Seguridad</option>
-                </select>
-                <textarea placeholder="Cuéntanos tu idea (Pitch breve)..." class="form-control" rows="4" required></textarea>
-                <button type="submit" class="submit-btn">ENVIAR SOLICITUD DE ADMISIÓN</button>
-            </form>
+      </a>
+
+      <a href="#" class="news-item" style="border-left-color: var(--accent);" aria-label="Noticia: Comunidad y aprendizaje">
+        <div class="news-date" style="color: var(--accent);">10 FEB</div>
+        <div>
+          <h3>Comunidad: aprender acompañado</h3>
+          <p>Estamos creando espacios para adultos que quieren ponerse al día en tecnología, paso a paso y sin afán.</p>
         </div>
-    </section>
+      </a>
+    </div>
+  </section>
 
-    <footer>
-        <div class="footer-content">
-            <div>
-                <h3 style="color: var(--neon-blue); font-family: 'Archivo Black';">GUTIGU</h3>
-                <p style="color: var(--text-secondary); margin-top: 1rem;">Innovación que transforma. Desde Colombia para el mundo.</p>
-            </div>
-            <div>
-                <h4 style="color: var(--neon-yellow); margin-bottom: 1rem;">Legal</h4>
-                <ul style="list-style: none; line-height: 2;">
-                    <li><a href="#" style="color: var(--text-secondary); text-decoration: none;">Privacidad</a></li>
-                    <li><a href="#" style="color: var(--text-secondary); text-decoration: none;">Términos</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 style="color: var(--neon-yellow); margin-bottom: 1rem;">Contacto</h4>
-                <p style="color: var(--text-secondary);">contacto@gutigu.com</p>
-                <p style="color: var(--text-secondary);">Bogotá, Colombia</p>
-            </div>
-        </div>
-        <div style="text-align: center; margin-top: 3rem; color: var(--text-secondary); font-size: 0.8rem;">
-            &copy; 2026 GUTIGU. Made with 💚 in Colombia.
-        </div>
-    </footer>
+  <!-- COMUNIDAD -->
+  <section id="comunidad" class="sections fade-in" aria-label="Comunidad">
+    <div class="section-header">
+      <span class="badge">👥 Comunidad</span>
+      <h2 class="section-title" style="margin-top:0.6rem;">Adultos que quieren actualizarse</h2>
+      <p class="section-subtitle">
+        La comunidad es para aprender con calma, compartir dudas y tener apoyo. Sin pena, sin tecnicismos.
+      </p>
+    </div>
 
-    <script>
-        // Scroll Animation Observer
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('visible');
-            });
-        }, { threshold: 0.1 });
+    <div class="grid">
+      <div class="card">
+        <div class="iconbox" style="background:#0EA5E9;">📌</div>
+        <h3>Encuentros cortos</h3>
+        <p>Sesiones cortas: “Cómo reconocer estafas”, “IA en fácil”, “Apps útiles para el día a día”.</p>
+      </div>
 
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+      <div class="card">
+        <div class="iconbox" style="background:#7C3AED;">🧩</div>
+        <h3>Retos suaves</h3>
+        <p>Pequeños retos semanales: aprender una función, practicar una app, mejorar seguridad en el celular.</p>
+      </div>
 
-        // Form Logic
-        const form = document.getElementById('semilleroForm');
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const btn = this.querySelector('.submit-btn');
-            btn.textContent = "TRANSMITIENDO...";
-            btn.disabled = true;
+      <div class="card">
+        <div class="iconbox" style="background:#111827;">🤝</div>
+        <h3>Acompañamiento</h3>
+        <p>Si algo te enreda, lo resolvemos contigo: paso a paso, sin afán y con paciencia.</p>
+      </div>
+    </div>
+  </section>
 
-            setTimeout(() => {
-                this.innerHTML = `
-                    <div class="success-message" style="display:block;">
-                        <div class="glitch-text">SOLICITUD RECIBIDA</div>
-                        <p>> Transmisión encriptada con éxito. Tu idea ha sido sembrada.</p>
-                        <button onclick="location.reload()" style="margin-top:1rem; background:none; border:1px solid var(--neon-blue); color:var(--neon-blue); padding:0.5rem 1rem; cursor:pointer;">Reiniciar Terminal</button>
-                    </div>`;
-            }, 1500);
+  <!-- SEMILLERO -->
+  <section id="semillero" class="sections fade-in" aria-label="Semillero de ideas">
+    <div class="section-header">
+      <span class="badge">💡 Semillero</span>
+      <h2 class="section-title" style="margin-top:0.6rem;">¿Tienes una idea de negocio en tecnología?</h2>
+      <p class="section-subtitle">
+        Si eres adulto y tienes una idea (apps, juegos, servicios, comunidad), te ayudamos a aterrizarla:
+        qué problema resuelve, para quién es y cómo empezar.
+      </p>
+    </div>
+
+    <div class="form-container">
+      <form id="semilleroForm" aria-label="Formulario Semillero">
+        <input type="text" placeholder="Tu nombre o el nombre de tu idea/proyecto" class="form-control" required>
+        <input type="email" placeholder="Correo para contactarte" class="form-control" required>
+
+        <select class="form-control" aria-label="Interés principal">
+          <option>Quiero mejorar mi seguridad digital (apps)</option>
+          <option>Quiero aprender tecnología/IA en fácil</option>
+          <option>Tengo una idea de juego para memoria/bienestar</option>
+          <option>Tengo una idea de negocio en tecnología</option>
+          <option>Quiero participar en la comunidad</option>
+        </select>
+
+        <textarea
+          placeholder="Cuéntanos: ¿qué quieres lograr?, ¿qué te preocupa?, ¿qué idea tienes? Entre más claro, mejor."
+          class="form-control" rows="4" required></textarea>
+
+        <button type="submit" class="submit-btn">Solicitar orientación</button>
+
+        <p style="margin-top: 0.75rem; color: var(--muted); font-size: 0.95rem;">
+          *Te contactaremos por correo. No compartimos tu información con terceros.
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h3 style="color: #E6EAF2; font-family: 'Archivo Black'; letter-spacing: 1px;">GUTIGU</h3>
+        <p style="margin-top: 0.75rem;">
+          Tecnología pensada para adultos. Acompañamiento claro, desde Colombia para el mundo.
+        </p>
+      </div>
+
+      <div>
+        <h4 style="color: #E6EAF2; margin-bottom: 0.75rem;">Ayuda</h4>
+        <ul style="list-style: none; line-height: 2;">
+          <!-- NO se modifican políticas/terminos: se mantienen como enlaces -->
+          <li><a href="#" style="text-decoration: none;">Privacidad</a></li>
+          <li><a href="#" style="text-decoration: none;">Términos de uso</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 style="color: #E6EAF2; margin-bottom: 0.75rem;">Contacto</h4>
+        <p>contacto@gutigu.com</p>
+        <p>Bogotá, Colombia</p>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 2.25rem; color: rgba(230,234,242,0.75); font-size: 0.95rem;">
+      &copy; 2026 GUTIGU. Innovación con base en la experiencia.
+    </div>
+  </footer>
+
+  <script>
+    // Animaciones al bajar página
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Formulario
+    const form = document.getElementById('semilleroForm');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = this.querySelector('.submit-btn');
+      btn.textContent = "Enviando...";
+      btn.disabled = true;
+
+      setTimeout(() => {
+        this.innerHTML = `
+          <div style="text-align: center; padding: 1.5rem; border: 1px solid rgba(22,101,52,0.35); border-radius: 16px; color: #E6EAF2; background:#0B1220;">
+            <h3 style="margin-bottom:0.75rem;">¡Listo! Mensaje recibido</h3>
+            <p style="opacity:0.9;">Recibimos tu información. Pronto alguien del equipo te escribe para orientar tu caso.</p>
+            <button onclick="location.reload()"
+              style="margin-top:1.25rem; background:transparent; border:1px solid rgba(230,234,242,0.55); color:#E6EAF2;
+              padding:0.75rem 1rem; cursor:pointer; border-radius:14px; min-height:48px;">
+              Volver al inicio
+            </button>
+          </div>`;
+      }, 1200);
+    });
+
+    // Juego Mente Maestra
+    const icons = ['🛡️', '🎮', '🤖', '⚡', '🧠', '💾', '🛡️', '🎮', '🤖', '⚡', '🧠', '💾'];
+    let flippedCards = [];
+    let matchedPairs = 0;
+    let attempts = 0;
+    let score = 0;
+
+    function createBoard() {
+      const board = document.getElementById('game-board');
+      if (!board) return;
+      board.innerHTML = '';
+      const shuffled = [...icons].sort(() => 0.5 - Math.random());
+
+      shuffled.forEach((icon) => {
+        const card = document.createElement('div');
+        card.classList.add('memory-card');
+        card.dataset.icon = icon;
+        card.innerHTML = '?';
+        card.setAttribute('role', 'button');
+        card.setAttribute('aria-label', 'Carta del ejercicio');
+        card.setAttribute('tabindex', '0');
+        card.addEventListener('click', flipCard);
+        card.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') flipCard.call(card);
         });
+        board.appendChild(card);
+      });
+    }
 
-        // LÓGICA DEL JUEGO MENTE MAESTRA
-        const icons = ['🛡️', '🎮', '🤖', '⚡', '🧠', '💾', '🛡️', '🎮', '🤖', '⚡', '🧠', '💾'];
-        let flippedCards = [];
-        let matchedPairs = 0;
-        let attempts = 0;
-        let score = 0;
+    function flipCard() {
+      if (flippedCards.length < 2 && !this.classList.contains('flipped') && !this.classList.contains('matched')) {
+        this.classList.add('flipped');
+        this.innerHTML = this.dataset.icon;
+        flippedCards.push(this);
 
-        function createBoard() {
-            const board = document.getElementById('game-board');
-            board.innerHTML = ''; 
-            const shuffled = [...icons].sort(() => 0.5 - Math.random());
-            
-            shuffled.forEach((icon, index) => {
-                const card = document.createElement('div');
-                card.classList.add('memory-card');
-                card.dataset.icon = icon;
-                card.innerHTML = '?';
-                card.addEventListener('click', flipCard);
-                board.appendChild(card);
-            });
+        if (flippedCards.length === 2) {
+          attempts++;
+          const attemptsEl = document.getElementById('attempts');
+          if (attemptsEl) attemptsEl.innerText = attempts;
+          checkMatch();
         }
+      }
+    }
 
-        function flipCard() {
-            if (flippedCards.length < 2 && !this.classList.contains('flipped') && !this.classList.contains('matched')) {
-                this.classList.add('flipped');
-                this.innerHTML = this.dataset.icon;
-                flippedCards.push(this);
+    function checkMatch() {
+      const [card1, card2] = flippedCards;
+      if (card1.dataset.icon === card2.dataset.icon) {
+        card1.classList.add('matched');
+        card2.classList.add('matched');
+        score += 100;
 
-                if (flippedCards.length === 2) {
-                    attempts++;
-                    document.getElementById('attempts').innerText = attempts;
-                    checkMatch();
-                }
-            }
+        const scoreEl = document.getElementById('score');
+        if (scoreEl) scoreEl.innerText = score;
+
+        matchedPairs++;
+        flippedCards = [];
+
+        if (matchedPairs === icons.length / 2) {
+          setTimeout(() => alert(`¡Excelente! Terminaste el ejercicio con ${attempts} intentos.`), 400);
         }
+      } else {
+        setTimeout(() => {
+          card1.classList.remove('flipped');
+          card2.classList.remove('flipped');
+          card1.innerHTML = '?';
+          card2.innerHTML = '?';
+          flippedCards = [];
+        }, 900);
+      }
+    }
 
-        function checkMatch() {
-            const [card1, card2] = flippedCards;
-            if (card1.dataset.icon === card2.dataset.icon) {
-                card1.classList.add('matched');
-                card2.classList.add('matched');
-                score += 100;
-                document.getElementById('score').innerText = score;
-                matchedPairs++;
-                flippedCards = [];
-                if (matchedPairs === icons.length / 2) {
-                    setTimeout(() => alert(`¡Excelente trabajo! Puntuación: ${score}`), 500);
-                }
-            } else {
-                setTimeout(() => {
-                    card1.classList.remove('flipped');
-                    card2.classList.remove('flipped');
-                    card1.innerHTML = '?';
-                    card2.innerHTML = '?';
-                    flippedCards = [];
-                }, 1000);
-            }
+    function resetGame() {
+      score = 0; attempts = 0; matchedPairs = 0; flippedCards = [];
+      const scoreEl = document.getElementById('score');
+      const attemptsEl = document.getElementById('attempts');
+      if (scoreEl) scoreEl.innerText = '0';
+      if (attemptsEl) attemptsEl.innerText = '0';
+      createBoard();
+    }
+
+    window.addEventListener('load', createBoard);
+
+    // Desplazamiento suave
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // CHAT (UI lista para conectar)
+    const chatBody = document.getElementById('chatBody');
+    const chatInput = document.getElementById('chatInput');
+
+    function addMsg(text, role) {
+      const div = document.createElement('div');
+      div.className = `msg ${role}`;
+      div.textContent = text;
+      chatBody.appendChild(div);
+      chatBody.scrollTop = chatBody.scrollHeight;
+    }
+
+    function clearChat() {
+      chatBody.innerHTML = '';
+      addMsg('Hola 😊 Soy tu asistente. Escribe una pregunta como: “¿Cómo bloqueo mensajes spam?” o “Explícame qué es IA en sencillo”.', 'assistant');
+      addMsg('Nota: este chat está listo para conectarse a un endpoint seguro (sin poner claves en la página).', 'assistant');
+    }
+
+    async function sendMessage() {
+      const text = (chatInput.value || '').trim();
+      if (!text) return;
+
+      addMsg(text, 'user');
+      chatInput.value = '';
+
+      // Respuesta temporal (hasta que conectes un endpoint real)
+      addMsg('Estoy listo para responder. Para conectarme a ChatGPT dentro de tu web, configura un endpoint /api/chat en tu servidor.\n\nPor ahora, usa “Abrir ChatGPT” si quieres respuesta inmediata.', 'assistant');
+
+      /*
+        ✅ Integración real (recomendado):
+        - Crea un endpoint en tu servidor: POST /api/chat
+        - Recibe { message: "..." }
+        - Tu servidor llama a OpenAI y devuelve { reply: "..." }
+
+        Luego reemplaza el bloque anterior por:
+
+        try {
+          const res = await fetch('/api/chat', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ message: text })
+          });
+          const data = await res.json();
+          addMsg(data.reply || 'No pude responder en este momento.', 'assistant');
+        } catch (err) {
+          addMsg('En este momento el chat no está disponible. Puedes usar “Abrir ChatGPT”.', 'assistant');
         }
+      */
+    }
 
-        function resetGame() {
-            score = 0; attempts = 0; matchedPairs = 0; flippedCards = [];
-            document.getElementById('score').innerText = '0';
-            document.getElementById('attempts').innerText = '0';
-            createBoard();
-        }
-
-        window.addEventListener('load', createBoard);
-
-        // Smooth Scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) target.scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-    </script>
+    // Enter para enviar
+    if (chatInput) {
+      chatInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') sendMessage();
+      });
+    }
+  </script>
 </body>
 </html>

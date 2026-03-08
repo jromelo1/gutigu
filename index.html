@@ -829,182 +829,409 @@
     });
   </script>
   <!-- PRIVACIDAD (modal, se activa desde el footer) -->
-<div id="privacy-modal" style="display:none; position:fixed; inset:0; z-index:9999; overflow-y:auto; background:rgba(11,18,32,0.85); backdrop-filter:blur(6px);" role="dialog" aria-modal="true" aria-label="Política de Privacidad">
-  <div style="max-width:800px; margin:40px auto; background:#F7F8FA; border-radius:20px; overflow:hidden; box-shadow:0 24px 64px rgba(0,0,0,0.4);">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidad – Guardian Digital & SOSquake</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap');
 
-    <div style="background:linear-gradient(135deg,#0f1f3d,#1a3a6e); color:white; padding:36px 32px 28px; text-align:center; position:relative;">
-      <button onclick="closePrivacy()" aria-label="Cerrar" style="position:absolute;top:16px;right:20px;background:rgba(255,255,255,0.12);border:none;color:white;width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:1.1rem;">&#x2715;</button>
-      <div style="font-family:'Archivo Black',sans-serif;letter-spacing:0.12em;color:#00c06b;font-size:0.95rem;margin-bottom:6px;">GUTIGU</div>
-      <div style="display:flex;justify-content:center;gap:10px;margin:12px 0 16px;flex-wrap:wrap;">
-        <span style="background:#00c06b;color:#003d22;padding:5px 14px;border-radius:30px;font-size:0.83rem;font-weight:700;">&#x1F6E1;&#xFE0F; Guardian Digital</span>
-        <span style="background:#e85d00;color:white;padding:5px 14px;border-radius:30px;font-size:0.83rem;font-weight:700;">&#x1F6A8; SOSquake</span>
-      </div>
-      <h2 style="font-family:'Archivo Black',sans-serif;font-size:1.6rem;margin-bottom:6px;">Política de Privacidad</h2>
-      <p style="color:rgba(255,255,255,0.55);font-size:0.87rem;">Última actualización: Marzo 2026 · Bogotá, Colombia</p>
-    </div>
+  :root {
+    --navy: #0f1f3d;
+    --blue: #1a3a6e;
+    --green: #00c06b;
+    --orange: #e85d00;
+    --light: #f4f7fb;
+    --text: #1e2d45;
+    --muted: #5a6e88;
+    --border: #dde6f0;
+  }
 
-    <div style="display:flex;background:#0a1628;position:sticky;top:0;z-index:10;" role="tablist">
-      <button id="ptab-g" onclick="pshow('g')" role="tab" aria-selected="true"  style="flex:1;padding:12px 6px;border:none;cursor:pointer;font-size:0.82rem;font-weight:700;background:transparent;color:#00c06b;border-bottom:3px solid #00c06b;transition:0.2s;">&#x1F6E1;&#xFE0F; Guardian Digital</button>
-      <button id="ptab-s" onclick="pshow('s')" role="tab" aria-selected="false" style="flex:1;padding:12px 6px;border:none;cursor:pointer;font-size:0.82rem;font-weight:700;background:transparent;color:rgba(255,255,255,0.4);border-bottom:3px solid transparent;transition:0.2s;">&#x1F6A8; SOSquake</button>
-      <button id="ptab-c" onclick="pshow('c')" role="tab" aria-selected="false" style="flex:1;padding:12px 6px;border:none;cursor:pointer;font-size:0.82rem;font-weight:700;background:transparent;color:rgba(255,255,255,0.4);border-bottom:3px solid transparent;transition:0.2s;">&#x1F4CB; Disposiciones Comunes</button>
-    </div>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    <div style="padding:28px 28px 36px;">
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--light);
+    color: var(--text);
+    line-height: 1.75;
+  }
 
-      <!-- GUARDIAN DIGITAL -->
-      <div id="pc-g">
-        <div style="background:#e6f9f0;border-left:4px solid #00c06b;border-radius:8px;padding:14px 18px;margin-bottom:20px;font-size:0.93rem;color:#1a4d33;">
-          <strong>Guardian Digital</strong> analiza tus SMS directamente en el dispositivo. <strong>Ningún mensaje ni dato personal sale de tu teléfono.</strong>
-        </div>
-        <div style="background:white;border:1px solid #D0D5DD;border-radius:12px;padding:20px 24px;margin-bottom:12px;">
-          <h3 style="font-family:'Archivo Black',sans-serif;font-size:1rem;margin-bottom:10px;color:#101828;">¿Qué hace Guardian Digital?</h3>
-          <p style="font-size:0.94rem;color:#344054;">Protege a adultos mayores en Colombia contra fraudes por SMS. Detecta mensajes que suplantan bancos (Nequi, Bancolombia, Daviplata), operadores (Claro, Tigo, Movistar) y entidades del gobierno (SIMIT, DIAN).</p>
-        </div>
-        <div style="background:white;border:1px solid #D0D5DD;border-radius:12px;padding:20px 24px;margin-bottom:12px;">
-          <h3 style="font-family:'Archivo Black',sans-serif;font-size:1rem;margin-bottom:10px;color:#101828;">Información que procesamos</h3>
-          <ul style="padding-left:18px;color:#344054;font-size:0.94rem;">
-            <li style="margin-bottom:6px;"><strong>Contenido de SMS recibidos:</strong> para analizar si contienen patrones de fraude.</li>
-            <li style="margin-bottom:6px;"><strong>Número del remitente:</strong> para verificar si es un familiar de confianza.</li>
-            <li style="margin-bottom:6px;"><strong>Lista de familiares seguros:</strong> números que tú agregas manualmente.</li>
-            <li><strong>Mensajes bloqueados:</strong> guardados localmente para que puedas revisarlos.</li>
-          </ul>
-          <div style="background:#f0faf5;border:1px solid #a3e4c3;border-radius:8px;padding:10px 14px;margin-top:12px;font-size:0.91rem;color:#1a5c38;">
-            ✅ <strong>Todo el análisis ocurre dentro de tu teléfono.</strong> No usamos servidores externos.
-          </div>
-        </div>
-        <div style="background:white;border:1px solid #D0D5DD;border-radius:12px;padding:20px 24px;margin-bottom:12px;">
-          <h3 style="font-family:'Archivo Black',sans-serif;font-size:1rem;margin-bottom:10px;color:#101828;">Permisos que solicitamos</h3>
-          <ul style="padding-left:18px;color:#344054;font-size:0.94rem;">
-            <li style="margin-bottom:6px;"><strong>RECEIVE_SMS / READ_SMS:</strong> interceptar y analizar mensajes antes de que lleguen a tu bandeja.</li>
-            <li style="margin-bottom:6px;"><strong>BIND_NOTIFICATION_LISTENER_SERVICE:</strong> cancelar notificaciones fraudulentas en Samsung y otros dispositivos.</li>
-            <li style="margin-bottom:6px;"><strong>POST_NOTIFICATIONS:</strong> avisarte cuando se bloquea un mensaje sospechoso.</li>
-            <li><strong>RECEIVE_BOOT_COMPLETED:</strong> reactivar la protección automáticamente al reiniciar.</li>
-          </ul>
-        </div>
-        <div style="background:white;border:1px solid #D0D5DD;border-radius:12px;padding:20px 24px;">
-          <h3 style="font-family:'Archivo Black',sans-serif;font-size:1rem;margin-bottom:10px;color:#101828;">Lo que NO hacemos</h3>
-          <ul style="padding-left:18px;color:#344054;font-size:0.94rem;">
-            <li style="margin-bottom:6px;">❌ No enviamos tus mensajes a servidores externos.</li>
-            <li style="margin-bottom:6px;">❌ No accedemos a tu ubicación, cámara ni micrófono.</li>
-            <li style="margin-bottom:6px;">❌ No compartimos información con terceros ni anunciantes.</li>
-            <li>❌ No creamos perfiles de usuario ni hacemos seguimiento de comportamiento.</li>
-          </ul>
-        </div>
-      </div>
+  header {
+    background: linear-gradient(135deg, var(--navy) 0%, #1a3a6e 100%);
+    color: white;
+    padding: 52px 24px 44px;
+    text-align: center;
+  }
 
-      <!-- SOSQUAKE -->
-      <div id="pc-s" style="display:none;">
-        <div style="background:#fff3ec;border-left:4px solid #e85d00;border-radius:8px;padding:14px 18px;margin-bottom:20px;font-size:0.93rem;color:#6b2500;">
-          <strong>SOSquake</strong> es una app de seguridad personal y SOS. <strong>Solo usamos tu información para prestarte el servicio de emergencia.</strong>
-        </div>
-        <div style="background:white;border:1px solid #D0D5DD;border-radius:12px;padding:20px 24px;margin-bottom:12px;">
-          <h3 style="font-family:'Archivo Black',sans-serif;font-size:1rem;margin-bottom:10px;color:#101828;">Información que procesamos</h3>
-          <ul style="padding-left:18px;color:#344054;font-size:0.94rem;">
-            <li style="margin-bottom:6px;"><strong>Ubicación GPS:</strong> para incluir tu posición en las alertas enviadas a tus contactos.</li>
-            <li style="margin-bottom:6px;"><strong>Contactos de emergencia:</strong> números que designas como receptores de tus alertas SOS.</li>
-            <li style="margin-bottom:6px;"><strong>Información de contactos:</strong> nombre y teléfono para mostrar tus contactos dentro de la app.</li>
-            <li style="margin-bottom:6px;"><strong>SMS:</strong> para enviar alertas de emergencia con tu ubicación a tus contactos.</li>
-            <li style="margin-bottom:6px;"><strong>Micrófono / Cámara:</strong> solo si activas grabación durante una emergencia.</li>
-            <li><strong>Notificaciones del sistema:</strong> para recibir y enviar alertas críticas.</li>
-          </ul>
-          <div style="background:#fff5f0;border:1px solid #f5c0a0;border-radius:8px;padding:10px 14px;margin-top:12px;font-size:0.91rem;color:#7a2e00;">
-            ⚠️ <strong>Tu ubicación solo se comparte con los contactos de emergencia que tú eliges.</strong> No la enviamos a terceros.
-          </div>
-        </div>
-        <div style="background:white;border:1px solid #D0D5DD;border-radius:12px;padding:20px 24px;margin-bottom:12px;">
-          <h3 style="font-family:'Archivo Black',sans-serif;font-size:1rem;margin-bottom:10px;color:#101828;">Permisos que solicitamos</h3>
-          <ul style="padding-left:18px;color:#344054;font-size:0.94rem;">
-            <li style="margin-bottom:6px;"><strong>ACCESS_FINE_LOCATION:</strong> obtener tu posición GPS para incluirla en alertas SOS.</li>
-            <li style="margin-bottom:6px;"><strong>READ_CONTACTS:</strong> permitirte seleccionar contactos de emergencia desde tu agenda.</li>
-            <li style="margin-bottom:6px;"><strong>SEND_SMS / READ_SMS:</strong> enviar y gestionar alertas de emergencia por mensaje de texto.</li>
-            <li style="margin-bottom:6px;"><strong>RECORD_AUDIO / CAMERA:</strong> grabar evidencia durante una emergencia (solo cuando lo activas manualmente).</li>
-            <li style="margin-bottom:6px;"><strong>POST_NOTIFICATIONS:</strong> enviarte alertas y confirmaciones de SOS.</li>
-            <li><strong>RECEIVE_BOOT_COMPLETED:</strong> mantener activa la protección después de reiniciar.</li>
-          </ul>
-        </div>
-        <div style="background:white;border:1px solid #D0D5DD;border-radius:12px;padding:20px 24px;">
-          <h3 style="font-family:'Archivo Black',sans-serif;font-size:1rem;margin-bottom:10px;color:#101828;">Lo que NO hacemos</h3>
-          <ul style="padding-left:18px;color:#344054;font-size:0.94rem;">
-            <li style="margin-bottom:6px;">❌ No rastreamos tu ubicación en segundo plano sin que lo actives.</li>
-            <li style="margin-bottom:6px;">❌ No accedemos al micrófono ni cámara fuera de emergencias activas.</li>
-            <li style="margin-bottom:6px;">❌ No leemos tus SMS personales, solo los relacionados con alertas SOS.</li>
-            <li style="margin-bottom:6px;">❌ No compartimos tus contactos con terceros ni anunciantes.</li>
-            <li>❌ No vendemos ningún dato personal.</li>
-          </ul>
-        </div>
-      </div>
+  .app-badges {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
 
-      <!-- DISPOSICIONES COMUNES -->
-      <div id="pc-c" style="display:none;">
-        <div style="background:#eef3fb;border-left:4px solid #1D4ED8;border-radius:8px;padding:14px 18px;margin-bottom:20px;font-size:0.93rem;color:#667085;">
-          Las siguientes disposiciones aplican a <strong>Guardian Digital</strong> y <strong>SOSquake</strong>, ambas desarrolladas por <strong>GUTIGU</strong>.
-        </div>
-        <div style="background:white;border:1px solid #D0D5DD;border-radius:12px;padding:20px 24px;margin-bottom:12px;">
-          <h3 style="font-family:'Archivo Black',sans-serif;font-size:1rem;margin-bottom:10px;color:#101828;">¿Quién desarrolla estas apps?</h3>
-          <p style="font-size:0.94rem;color:#344054;"><strong>GUTIGU</strong> es una plataforma de tecnología pensada para adultos mayores de 50 años, con sede en Bogotá, Colombia. No pertenecemos a ningún grupo publicitario ni comercializamos datos de usuarios.</p>
-        </div>
-        <div style="background:white;border:1px solid #D0D5DD;border-radius:12px;padding:20px 24px;margin-bottom:12px;">
-          <h3 style="font-family:'Archivo Black',sans-serif;font-size:1rem;margin-bottom:10px;color:#101828;">Compartir información con terceros</h3>
-          <p style="font-size:0.94rem;color:#344054;">No vendemos, alquilamos ni cedemos tu información personal a terceros. La única excepción sería si una autoridad judicial colombiana lo requiriera mediante orden legal.</p>
-        </div>
-        <div style="background:white;border:1px solid #D0D5DD;border-radius:12px;padding:20px 24px;margin-bottom:12px;">
-          <h3 style="font-family:'Archivo Black',sans-serif;font-size:1rem;margin-bottom:10px;color:#101828;">Tus derechos</h3>
-          <ul style="padding-left:18px;color:#344054;font-size:0.94rem;">
-            <li style="margin-bottom:6px;">Revisar y eliminar datos almacenados desde la interfaz de cada app.</li>
-            <li style="margin-bottom:6px;">Revocar permisos desde Ajustes &gt; Aplicaciones en tu teléfono.</li>
-            <li style="margin-bottom:6px;">Desinstalar la app, lo que elimina todos los datos locales.</li>
-            <li>Contactarnos para solicitar información sobre tus datos.</li>
-          </ul>
-        </div>
-        <div style="background:white;border:1px solid #D0D5DD;border-radius:12px;padding:20px 24px;margin-bottom:12px;">
-          <h3 style="font-family:'Archivo Black',sans-serif;font-size:1rem;margin-bottom:10px;color:#101828;">Menores de edad</h3>
-          <p style="font-size:0.94rem;color:#344054;">Nuestras apps están diseñadas para adultos de 50 años en adelante y no están dirigidas a menores de 13 años. Si eres padre o tutor y crees que tu hijo ha proporcionado datos personales, contáctanos para eliminarlos.</p>
-        </div>
-        <div style="background:white;border:1px solid #D0D5DD;border-radius:12px;padding:20px 24px;">
-          <h3 style="font-family:'Archivo Black',sans-serif;font-size:1rem;margin-bottom:10px;color:#101828;">Cambios a esta política</h3>
-          <p style="font-size:0.94rem;color:#344054;">Si realizamos cambios significativos, actualizaremos la fecha al inicio del documento y lo publicaremos en <strong>gutigu.com</strong>. El uso continuado de las aplicaciones constituye aceptación de la nueva política.</p>
-        </div>
-        <div style="background:#0B1220;border-radius:12px;padding:24px 28px;margin-top:20px;text-align:center;">
-          <h3 style="font-family:'Archivo Black',sans-serif;color:#E6EAF2;margin-bottom:8px;">¿Tienes preguntas?</h3>
-          <p style="color:rgba(230,234,242,0.65);font-size:0.93rem;">Escríbenos a:</p>
-          <p style="margin-top:8px;"><a href="mailto:contacto@gutigu.com" style="color:#00c06b;font-weight:700;text-decoration:none;">contacto@gutigu.com</a></p>
-          <p style="margin-top:6px;color:rgba(230,234,242,0.4);font-size:0.82rem;">Respondemos en un plazo máximo de 5 días hábiles.</p>
-        </div>
-      </div>
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 18px;
+    border-radius: 30px;
+    font-size: 0.88rem;
+    font-weight: 600;
+  }
 
-    </div>
+  .badge-green { background: var(--green); color: #003d22; }
+  .badge-orange { background: var(--orange); color: white; }
+
+  header h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    margin-bottom: 8px;
+  }
+
+  header p { color: rgba(255,255,255,0.6); font-size: 0.9rem; }
+
+  .tabs {
+    display: flex;
+    background: #0a1628;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .tab {
+    flex: 1;
+    padding: 14px 8px;
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: rgba(255,255,255,0.45);
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s;
+    user-select: none;
+  }
+
+  .tab.green { color: var(--green); border-color: var(--green); }
+  .tab.orange { color: #ff7033; border-color: #ff7033; }
+  .tab.blue { color: #6fa3ff; border-color: #6fa3ff; }
+  .tab:not(.green):not(.orange):not(.blue):hover { color: rgba(255,255,255,0.8); }
+
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 36px 20px 80px;
+  }
+
+  .app-section { display: none; }
+  .app-section.active { display: block; }
+
+  .intro-box {
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    font-size: 0.94rem;
+  }
+
+  .ib-green { background: #e6f9f0; border-left: 4px solid var(--green); color: #1a4d33; }
+  .ib-orange { background: #fff3ec; border-left: 4px solid var(--orange); color: #6b2500; }
+  .ib-blue { background: #eef3fb; border-left: 4px solid var(--blue); color: var(--muted); }
+
+  section {
+    background: white;
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin-bottom: 14px;
+    border: 1px solid var(--border);
+  }
+
+  section h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.15rem;
+    color: var(--navy);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .n {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .ng { background: var(--green); color: #003d22; }
+  .no { background: var(--orange); color: white; }
+  .nb { background: var(--navy); color: white; }
+
+  p { margin-bottom: 10px; font-size: 0.95rem; }
+  p:last-child { margin-bottom: 0; }
+  ul { padding-left: 18px; margin-bottom: 10px; }
+  ul li { margin-bottom: 7px; font-size: 0.95rem; }
+
+  .pill {
+    display: inline-block;
+    font-size: 0.73rem;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .pg { background: #e6f9f0; color: #007a43; }
+  .po { background: #fff0e6; color: #b34400; }
+
+  .hl {
+    border-radius: 8px;
+    padding: 11px 15px;
+    margin-top: 12px;
+    font-size: 0.91rem;
+  }
+
+  .hlg { background: #f0faf5; border: 1px solid #a3e4c3; color: #1a5c38; }
+  .hlo { background: #fff5f0; border: 1px solid #f5c0a0; color: #7a2e00; }
+
+  .contact-box {
+    background: var(--navy);
+    color: white;
+    border-radius: 12px;
+    padding: 28px 30px;
+    margin-top: 28px;
+    text-align: center;
+  }
+
+  .contact-box h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+
+  .contact-box p { color: rgba(255,255,255,0.65); font-size: 0.93rem; }
+  .contact-box a { color: var(--green); text-decoration: none; font-weight: 600; }
+
+  footer {
+    text-align: center;
+    padding: 22px;
+    color: var(--muted);
+    font-size: 0.82rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="app-badges">
+    <span class="badge badge-green">&#x1F6E1;&#xFE0F; Guardian Digital</span>
+    <span class="badge badge-orange">&#x1F6A8; SOSquake</span>
   </div>
+  <h1>Politica de Privacidad</h1>
+  <p>Ultima actualizacion: Marzo 2026</p>
+</header>
+
+<div class="tabs">
+  <div class="tab green" onclick="show('guardian',this,'green')">&#x1F6E1;&#xFE0F; Guardian Digital</div>
+  <div class="tab" onclick="show('sos',this,'orange')">&#x1F6A8; SOSquake</div>
+  <div class="tab" onclick="show('shared',this,'blue')">&#x1F4CB; Disposiciones Comunes</div>
 </div>
 
+<main>
+
+  <!-- GUARDIAN DIGITAL -->
+  <div id="tab-guardian" class="app-section active">
+
+    <div class="intro-box ib-green">
+      <strong>Guardian Digital</strong> analiza tus SMS en el dispositivo para detectar fraudes.
+      <strong>Ningun mensaje ni dato personal sale de tu telefono.</strong>
+    </div>
+
+    <section>
+      <h2><span class="n ng">1</span> Que es Guardian Digital?</h2>
+      <p>Guardian Digital protege a adultos mayores en Colombia contra fraudes por SMS (smishing). Analiza mensajes entrantes para detectar intentos de estafa que suplantan bancos (Nequi, Bancolombia, Daviplata), operadores (Claro, Tigo, Movistar) y entidades del gobierno (SIMIT, DIAN).</p>
+    </section>
+
+    <section>
+      <h2><span class="n ng">2</span> Informacion que procesamos</h2>
+      <div class="pill pg">Solo en tu dispositivo</div>
+      <ul>
+        <li><strong>Contenido de SMS recibidos:</strong> para analizar si contienen patrones de fraude.</li>
+        <li><strong>Numero del remitente:</strong> para verificar si es un familiar de confianza.</li>
+        <li><strong>Lista de familiares seguros:</strong> numeros que tu agregas manualmente.</li>
+        <li><strong>Mensajes bloqueados:</strong> guardados localmente para que puedas revisarlos.</li>
+      </ul>
+      <div class="hl hlg">
+        &#x2705; <strong>Todo el analisis ocurre dentro de tu telefono.</strong> No usamos servidores externos ni conexion a internet para procesar tus mensajes.
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="n ng">3</span> Permisos que solicitamos</h2>
+      <ul>
+        <li><strong>RECEIVE_SMS / READ_SMS:</strong> interceptar y analizar mensajes antes de que lleguen a tu bandeja.</li>
+        <li><strong>BIND_NOTIFICATION_LISTENER_SERVICE:</strong> cancelar notificaciones fraudulentas en Samsung y otros dispositivos.</li>
+        <li><strong>POST_NOTIFICATIONS:</strong> avisarte cuando se bloquea un mensaje sospechoso.</li>
+        <li><strong>RECEIVE_BOOT_COMPLETED:</strong> reactivar la proteccion automaticamente al reiniciar.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="n ng">4</span> Lo que NO hacemos</h2>
+      <ul>
+        <li>&#x274C; No enviamos tus mensajes a servidores externos.</li>
+        <li>&#x274C; No accedemos a tu ubicacion, camara ni microfono.</li>
+        <li>&#x274C; No compartimos informacion con terceros ni anunciantes.</li>
+        <li>&#x274C; No creamos perfiles de usuario ni hacemos seguimiento de comportamiento.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="n ng">5</span> Almacenamiento local</h2>
+      <p>Los mensajes sospechosos se guardan en el almacenamiento privado de la app en tu telefono. Solo son accesibles desde Guardian Digital, se eliminan al desinstalar la app, y puedes borrarlos manualmente desde la pantalla "Revision" en cualquier momento.</p>
+    </section>
+
+  </div>
+
+  <!-- SOSQUAKE -->
+  <div id="tab-sos" class="app-section">
+
+    <div class="intro-box ib-orange">
+      <strong>SOSquake</strong> es una app de seguridad personal y SOS. Accede a tu ubicacion, contactos y otros datos para ayudarte en emergencias.
+      <strong>Solo usamos tu informacion para prestarte el servicio de emergencia.</strong>
+    </div>
+
+    <section>
+      <h2><span class="n no">1</span> Que es SOSquake?</h2>
+      <p>SOSquake es una aplicacion de seguridad personal que te permite enviar alertas de emergencia (SOS) a tus contactos de confianza. Esta disenada para situaciones criticas en las que necesitas ayuda rapida.</p>
+    </section>
+
+    <section>
+      <h2><span class="n no">2</span> Informacion que procesamos</h2>
+      <div class="pill po">Para el servicio de emergencia</div>
+      <ul>
+        <li><strong>Ubicacion GPS:</strong> para incluir tu posicion en las alertas de emergencia enviadas a tus contactos.</li>
+        <li><strong>Contactos de emergencia:</strong> numeros que designas como receptores de tus alertas SOS.</li>
+        <li><strong>Informacion de contactos:</strong> nombre y telefono para mostrar tus contactos de emergencia dentro de la app.</li>
+        <li><strong>SMS:</strong> para enviar alertas de emergencia con tu ubicacion a tus contactos designados.</li>
+        <li><strong>Microfono / Camara:</strong> si activas grabacion de evidencia durante una emergencia.</li>
+        <li><strong>Notificaciones del sistema:</strong> para recibir y enviar alertas criticas.</li>
+      </ul>
+      <div class="hl hlo">
+        &#x26A0;&#xFE0F; <strong>Tu ubicacion solo se comparte con los contactos de emergencia que tu eliges.</strong> No la enviamos a terceros ni la almacenamos en servidores propios.
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="n no">3</span> Permisos que solicitamos</h2>
+      <ul>
+        <li><strong>ACCESS_FINE_LOCATION:</strong> obtener tu posicion GPS para incluirla en alertas SOS.</li>
+        <li><strong>READ_CONTACTS:</strong> permitirte seleccionar contactos de emergencia desde tu agenda.</li>
+        <li><strong>SEND_SMS / READ_SMS:</strong> enviar y gestionar alertas de emergencia por mensaje de texto.</li>
+        <li><strong>RECORD_AUDIO / CAMERA:</strong> grabar evidencia de audio o video durante una emergencia (solo cuando lo activas manualmente).</li>
+        <li><strong>POST_NOTIFICATIONS:</strong> enviarte alertas y confirmaciones de SOS.</li>
+        <li><strong>RECEIVE_BOOT_COMPLETED:</strong> mantener activa la proteccion despues de reiniciar.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="n no">4</span> Como usamos tu ubicacion</h2>
+      <p>La ubicacion GPS se obtiene <strong>unicamente cuando activas una alerta SOS</strong> o cuando el monitoreo en segundo plano esta activado por ti explicitamente. Nunca rastreamos tu ubicacion de forma pasiva. Tu ubicacion:</p>
+      <ul>
+        <li>Se incluye en el mensaje SOS enviado a tus contactos de emergencia.</li>
+        <li>No se almacena en nuestros servidores.</li>
+        <li>No se comparte con anunciantes ni terceros.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="n no">5</span> Grabaciones de emergencia</h2>
+      <p>Si activas la grabacion de audio o video durante una emergencia, los archivos se guardan localmente en tu dispositivo. Son accesibles solo desde SOSquake y se eliminan al desinstalar la app. No los subimos a servidores sin tu consentimiento explicito.</p>
+    </section>
+
+    <section>
+      <h2><span class="n no">6</span> Lo que NO hacemos</h2>
+      <ul>
+        <li>&#x274C; No rastreamos tu ubicacion en segundo plano sin que lo actives.</li>
+        <li>&#x274C; No accedemos al microfono ni camara fuera de emergencias activas.</li>
+        <li>&#x274C; No leemos tus SMS personales, solo los relacionados con alertas SOS.</li>
+        <li>&#x274C; No compartimos tus contactos con terceros ni anunciantes.</li>
+        <li>&#x274C; No vendemos ningun dato personal.</li>
+      </ul>
+    </section>
+
+  </div>
+
+  <!-- DISPOSICIONES COMUNES -->
+  <div id="tab-shared" class="app-section">
+
+    <div class="intro-box ib-blue">
+      Las siguientes disposiciones aplican a <strong>Guardian Digital</strong> y <strong>SOSquake</strong> por igual.
+    </div>
+
+    <section>
+      <h2><span class="n nb">1</span> Compartir informacion con terceros</h2>
+      <p>No vendemos, alquilamos ni cedemos tu informacion personal a terceros. La unica excepcion seria si una autoridad judicial colombiana competente lo requiriera mediante orden legal, en cuyo caso cooperariamos dentro del marco de la ley.</p>
+    </section>
+
+    <section>
+      <h2><span class="n nb">2</span> Seguridad</h2>
+      <p>La mayor parte del procesamiento ocurre directamente en tu dispositivo, lo que minimiza el riesgo de exposicion externa. Te recomendamos proteger tu telefono con PIN, patron o huella dactilar.</p>
+    </section>
+
+    <section>
+      <h2><span class="n nb">3</span> Menores de edad</h2>
+      <p>Nuestras aplicaciones no estan dirigidas a menores de 13 anos y no recopilamos intencionalmente informacion de menores. Si eres padre o tutor y crees que tu hijo ha proporcionado informacion personal, contactanos para eliminarla.</p>
+    </section>
+
+    <section>
+      <h2><span class="n nb">4</span> Tus derechos</h2>
+      <p>En cualquier momento puedes:</p>
+      <ul>
+        <li>Revisar y eliminar datos almacenados desde la interfaz de cada app.</li>
+        <li>Revocar permisos desde Ajustes > Aplicaciones en tu telefono.</li>
+        <li>Desinstalar la app, eliminando todos los datos locales.</li>
+        <li>Contactarnos para solicitar informacion sobre tus datos.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="n nb">5</span> Cambios a esta politica</h2>
+      <p>Si realizamos cambios significativos actualizaremos la fecha al inicio del documento. El uso continuado de las aplicaciones tras la publicacion de cambios constituye aceptacion de la nueva politica.</p>
+    </section>
+
+    <div class="contact-box">
+      <h2>Tienes preguntas?</h2>
+      <p>Para dudas sobre privacidad en cualquiera de nuestras apps, escribenos a:</p>
+      <br>
+      <p><a href="mailto:contacto@guardiansms.app">contacto@guardiansms.app</a></p>
+      <br>
+      <p style="font-size:0.83rem;color:rgba(255,255,255,0.4);">Respondemos en un plazo maximo de 5 dias habiles.</p>
+    </div>
+
+  </div>
+
+</main>
+
+<footer>
+  &copy; 2026 Guardian Digital &amp; SOSquake &middot; Todos los derechos reservados
+</footer>
+
 <script>
-  function openPrivacy() {
-    document.getElementById('privacy-modal').style.display = 'block';
-    document.body.style.overflow = 'hidden';
-    history.pushState(null, '', '#privacidad');
-  }
-  function closePrivacy() {
-    document.getElementById('privacy-modal').style.display = 'none';
-    document.body.style.overflow = '';
-    history.pushState(null, '', window.location.pathname);
-  }
-  if (window.location.hash === '#privacidad') {
-    window.addEventListener('load', openPrivacy);
-  }
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') closePrivacy();
-  });
-  function pshow(tab) {
-    ['g','s','c'].forEach(function(t) {
-      var content = document.getElementById('pc-' + t);
-      var btn = document.getElementById('ptab-' + t);
-      if (!content || !btn) return;
-      var isActive = (t === tab);
-      content.style.display = isActive ? 'block' : 'none';
-      btn.setAttribute('aria-selected', String(isActive));
-      var colors = {g: '#00c06b', s: '#ff7033', c: '#6fa3ff'};
-      btn.style.color = isActive ? colors[t] : 'rgba(255,255,255,0.4)';
-      btn.style.borderBottomColor = isActive ? colors[t] : 'transparent';
-    });
+  function show(name, el, color) {
+    document.querySelectorAll('.app-section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('green','orange','blue'));
+    document.getElementById('tab-' + name).classList.add('active');
+    el.classList.add(color);
   }
 </script>
 </body>

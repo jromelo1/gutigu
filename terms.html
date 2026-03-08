@@ -1,401 +1,408 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Términos de Uso - Guardian Digital | Gutigu</title>
-    <meta name="description" content="Términos y condiciones de uso de Guardian Digital.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidad – Guardian Digital & SOSquake</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap');
 
-        :root {
-            --primary: #FF6B35;
-            --secondary: #004E89;
-            --dark: #1A1A2E;
-            --light: #F8F9FA;
-            --gradient: linear-gradient(135deg, #FF6B35 0%, #F77F00 100%);
-        }
+  :root {
+    --navy: #0f1f3d;
+    --blue: #1a3a6e;
+    --green: #00c06b;
+    --orange: #e85d00;
+    --light: #f4f7fb;
+    --text: #1e2d45;
+    --muted: #5a6e88;
+    --border: #dde6f0;
+  }
 
-        body {
-            font-family: 'Outfit', sans-serif;
-            color: var(--dark);
-            background: var(--light);
-            line-height: 1.8;
-        }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
 
-        header {
-            background: white;
-            padding: 1.5rem 2rem;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-        }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--light);
+    color: var(--text);
+    line-height: 1.75;
+  }
 
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+  header {
+    background: linear-gradient(135deg, var(--navy) 0%, #1a3a6e 100%);
+    color: white;
+    padding: 52px 24px 44px;
+    text-align: center;
+  }
 
-        .logo {
-            font-family: 'Syne', sans-serif;
-            font-size: 2rem;
-            font-weight: 800;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-decoration: none;
-        }
+  .app-badges {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
 
-        .back-link {
-            color: var(--dark);
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 18px;
+    border-radius: 30px;
+    font-size: 0.88rem;
+    font-weight: 600;
+  }
 
-        .back-link:hover {
-            color: var(--primary);
-        }
+  .badge-green { background: var(--green); color: #003d22; }
+  .badge-orange { background: var(--orange); color: white; }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
+  header h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    margin-bottom: 8px;
+  }
 
-        h1 {
-            font-family: 'Syne', sans-serif;
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
+  header p { color: rgba(255,255,255,0.6); font-size: 0.9rem; }
 
-        .subtitle {
-            color: #666;
-            font-size: 1.1rem;
-            margin-bottom: 3rem;
-        }
+  .tabs {
+    display: flex;
+    background: #0a1628;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
 
-        h2 {
-            font-family: 'Syne', sans-serif;
-            font-size: 2rem;
-            font-weight: 700;
-            margin-top: 3rem;
-            margin-bottom: 1rem;
-            color: var(--dark);
-        }
+  .tab {
+    flex: 1;
+    padding: 14px 8px;
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: rgba(255,255,255,0.45);
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s;
+    user-select: none;
+  }
 
-        h3 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            color: var(--secondary);
-        }
+  .tab.green { color: var(--green); border-color: var(--green); }
+  .tab.orange { color: #ff7033; border-color: #ff7033; }
+  .tab.blue { color: #6fa3ff; border-color: #6fa3ff; }
+  .tab:not(.green):not(.orange):not(.blue):hover { color: rgba(255,255,255,0.8); }
 
-        p {
-            margin-bottom: 1.5rem;
-            font-size: 1.05rem;
-            color: #444;
-        }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 36px 20px 80px;
+  }
 
-        ul, ol {
-            margin-left: 2rem;
-            margin-bottom: 1.5rem;
-        }
+  .app-section { display: none; }
+  .app-section.active { display: block; }
 
-        li {
-            margin-bottom: 0.8rem;
-            font-size: 1.05rem;
-            color: #444;
-        }
+  .intro-box {
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    font-size: 0.94rem;
+  }
 
-        .highlight-box {
-            background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(247, 127, 0, 0.1) 100%);
-            border-left: 4px solid var(--primary);
-            padding: 1.5rem;
-            margin: 2rem 0;
-            border-radius: 8px;
-        }
+  .ib-green { background: #e6f9f0; border-left: 4px solid var(--green); color: #1a4d33; }
+  .ib-orange { background: #fff3ec; border-left: 4px solid var(--orange); color: #6b2500; }
+  .ib-blue { background: #eef3fb; border-left: 4px solid var(--blue); color: var(--muted); }
 
-        .effective-date {
-            background: var(--dark);
-            color: white;
-            padding: 1rem 1.5rem;
-            border-radius: 8px;
-            display: inline-block;
-            margin-bottom: 2rem;
-            font-weight: 600;
-        }
+  section {
+    background: white;
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin-bottom: 14px;
+    border: 1px solid var(--border);
+  }
 
-        footer {
-            background: var(--dark);
-            color: white;
-            padding: 2rem;
-            text-align: center;
-            margin-top: 4rem;
-        }
+  section h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.15rem;
+    color: var(--navy);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
 
-        footer a {
-            color: var(--primary);
-            text-decoration: none;
-        }
+  .n {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
 
-        @media (max-width: 640px) {
-            h1 {
-                font-size: 2rem;
-            }
+  .ng { background: var(--green); color: #003d22; }
+  .no { background: var(--orange); color: white; }
+  .nb { background: var(--navy); color: white; }
 
-            h2 {
-                font-size: 1.5rem;
-            }
+  p { margin-bottom: 10px; font-size: 0.95rem; }
+  p:last-child { margin-bottom: 0; }
+  ul { padding-left: 18px; margin-bottom: 10px; }
+  ul li { margin-bottom: 7px; font-size: 0.95rem; }
 
-            .container {
-                padding: 2rem 1.5rem;
-            }
-        }
-    </style>
+  .pill {
+    display: inline-block;
+    font-size: 0.73rem;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .pg { background: #e6f9f0; color: #007a43; }
+  .po { background: #fff0e6; color: #b34400; }
+
+  .hl {
+    border-radius: 8px;
+    padding: 11px 15px;
+    margin-top: 12px;
+    font-size: 0.91rem;
+  }
+
+  .hlg { background: #f0faf5; border: 1px solid #a3e4c3; color: #1a5c38; }
+  .hlo { background: #fff5f0; border: 1px solid #f5c0a0; color: #7a2e00; }
+
+  .contact-box {
+    background: var(--navy);
+    color: white;
+    border-radius: 12px;
+    padding: 28px 30px;
+    margin-top: 28px;
+    text-align: center;
+  }
+
+  .contact-box h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+
+  .contact-box p { color: rgba(255,255,255,0.65); font-size: 0.93rem; }
+  .contact-box a { color: var(--green); text-decoration: none; font-weight: 600; }
+
+  footer {
+    text-align: center;
+    padding: 22px;
+    color: var(--muted);
+    font-size: 0.82rem;
+  }
+</style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html" class="logo">GUTIGU</a>
-            <a href="index.html" class="back-link">← Volver al inicio</a>
-        </nav>
-    </header>
 
-    <div class="container">
-        <h1>Términos de Uso</h1>
-        <p class="subtitle">Guardian Digital - Bloqueador de SMS Spam</p>
-        <div class="effective-date">Última actualización: Febrero 2025</div>
+<header>
+  <div class="app-badges">
+    <span class="badge badge-green">&#x1F6E1;&#xFE0F; Guardian Digital</span>
+    <span class="badge badge-orange">&#x1F6A8; SOSquake</span>
+  </div>
+  <h1>Politica de Privacidad</h1>
+  <p>Ultima actualizacion: Marzo 2026</p>
+</header>
 
-        <p>Bienvenido a Guardian Digital. Al descargar, instalar o utilizar nuestra aplicación, aceptas estar sujeto a estos Términos de Uso. Por favor, léelos cuidadosamente.</p>
+<div class="tabs">
+  <div class="tab green" onclick="show('guardian',this,'green')">&#x1F6E1;&#xFE0F; Guardian Digital</div>
+  <div class="tab" onclick="show('sos',this,'orange')">&#x1F6A8; SOSquake</div>
+  <div class="tab" onclick="show('shared',this,'blue')">&#x1F4CB; Disposiciones Comunes</div>
+</div>
 
-        <h2>1. Aceptación de los Términos</h2>
-        <p>Al acceder y usar Guardian Digital, aceptas cumplir con estos Términos de Uso y todas las leyes y regulaciones aplicables. Si no estás de acuerdo con alguno de estos términos, no debes usar la aplicación.</p>
+<main>
 
-        <h2>2. Descripción del Servicio</h2>
-        <p>Guardian Digital es una aplicación móvil diseñada para:</p>
-        <ul>
-            <li>Detectar y bloquear mensajes de texto spam</li>
-            <li>Identificar mensajes fraudulentos y de phishing</li>
-            <li>Proteger a los usuarios contra estafas telefónicas</li>
-            <li>Filtrar mensajes con contenido malicioso</li>
-        </ul>
+  <!-- GUARDIAN DIGITAL -->
+  <div id="tab-guardian" class="app-section active">
 
-        <h2>3. Requisitos de Uso</h2>
-        
-        <h3>3.1 Edad Mínima</h3>
-        <p>Debes tener al menos 18 años para usar Guardian Digital. Al usar la aplicación, confirmas que cumples con este requisito de edad.</p>
-
-        <h3>3.2 Dispositivos Compatibles</h3>
-        <p>Guardian Digital está diseñada para dispositivos Android. Eres responsable de asegurar que tu dispositivo cumple con los requisitos mínimos de sistema.</p>
-
-        <h3>3.3 Cuenta y Seguridad</h3>
-        <p>Aunque Guardian Digital no requiere crear una cuenta, eres responsable de:</p>
-        <ul>
-            <li>Mantener la seguridad de tu dispositivo</li>
-            <li>Proteger el acceso a la aplicación</li>
-            <li>Notificarnos sobre cualquier uso no autorizado</li>
-        </ul>
-
-        <h2>4. Permisos y Acceso</h2>
-        
-        <p>Al instalar Guardian Digital, otorgas los siguientes permisos necesarios para su funcionamiento:</p>
-        
-        <h3>4.1 Acceso a SMS</h3>
-        <p>La aplicación requiere permiso para leer y recibir mensajes SMS únicamente con el propósito de detectar y bloquear spam. Este acceso se utiliza exclusivamente para la funcionalidad de la aplicación.</p>
-
-        <h3>4.2 Acceso a Internet</h3>
-        <p>El acceso a Internet permite actualizar la base de datos de spam y mejorar la precisión de detección. Este permiso es opcional y la app puede funcionar sin conexión.</p>
-
-        <div class="highlight-box">
-            <strong>Importante:</strong> Guardian Digital SOLO accede a la información necesaria para su funcionamiento. No accedemos a contactos, ubicación, fotos u otros datos personales no relacionados con mensajes SMS.
-        </div>
-
-        <h2>5. Uso Aceptable</h2>
-
-        <p>Al usar Guardian Digital, aceptas:</p>
-        <ul>
-            <li>Usar la aplicación solo para propósitos legales y legítimos</li>
-            <li>No intentar descompilar, realizar ingeniería inversa o modificar la aplicación</li>
-            <li>No interferir con el funcionamiento normal de la aplicación</li>
-            <li>No usar la aplicación para actividades fraudulentas o maliciosas</li>
-            <li>Cumplir con todas las leyes y regulaciones aplicables</li>
-        </ul>
-
-        <h2>6. Limitaciones del Servicio</h2>
-
-        <h3>6.1 Precisión de Detección</h3>
-        <p>Aunque Guardian Digital utiliza algoritmos avanzados para detectar spam y fraudes, no podemos garantizar una precisión del 100%. La aplicación puede:</p>
-        <ul>
-            <li>No detectar todos los mensajes de spam (falsos negativos)</li>
-            <li>Clasificar incorrectamente mensajes legítimos como spam (falsos positivos)</li>
-        </ul>
-
-        <h3>6.2 Disponibilidad</h3>
-        <p>Nos esforzamos por mantener Guardian Digital disponible en todo momento, pero no garantizamos:</p>
-        <ul>
-            <li>Acceso ininterrumpido a la aplicación</li>
-            <li>Ausencia de errores o defectos</li>
-            <li>Corrección inmediata de todos los problemas</li>
-        </ul>
-
-        <h2>7. Propiedad Intelectual</h2>
-
-        <p>Guardian Digital y todo su contenido, características y funcionalidades son propiedad de Gutigu y están protegidos por:</p>
-        <ul>
-            <li>Derechos de autor internacionales</li>
-            <li>Leyes de marcas registradas</li>
-            <li>Otras leyes de propiedad intelectual</li>
-        </ul>
-
-        <p>No se te otorga ningún derecho o licencia sobre nuestra propiedad intelectual, excepto el derecho limitado de usar la aplicación según estos términos.</p>
-
-        <h2>8. Actualizaciones y Modificaciones</h2>
-
-        <h3>8.1 Actualizaciones de la Aplicación</h3>
-        <p>Podemos actualizar Guardian Digital periódicamente para:</p>
-        <ul>
-            <li>Mejorar la funcionalidad</li>
-            <li>Corregir errores</li>
-            <li>Añadir nuevas características</li>
-            <li>Mejorar la seguridad</li>
-        </ul>
-
-        <h3>8.2 Modificaciones de los Términos</h3>
-        <p>Nos reservamos el derecho de modificar estos Términos de Uso en cualquier momento. Te notificaremos sobre cambios significativos mediante:</p>
-        <ul>
-            <li>Notificación dentro de la aplicación</li>
-            <li>Actualización en nuestro sitio web</li>
-            <li>Email (si disponible)</li>
-        </ul>
-
-        <h2>9. Privacidad y Protección de Datos</h2>
-
-        <p>El uso de Guardian Digital también está sujeto a nuestra <a href="privacy-policy.html" style="color: var(--primary); text-decoration: underline;">Política de Privacidad</a>, que describe cómo recopilamos, usamos y protegemos tu información.</p>
-
-        <h2>10. Limitación de Responsabilidad</h2>
-
-        <p><strong>Guardian Digital se proporciona "tal cual" y "según disponibilidad" sin garantías de ningún tipo.</strong></p>
-
-        <h3>10.1 Exclusión de Garantías</h3>
-        <p>En la máxima medida permitida por la ley, excluimos todas las garantías, expresas o implícitas, incluyendo pero no limitado a:</p>
-        <ul>
-            <li>Garantías de comerciabilidad</li>
-            <li>Aptitud para un propósito particular</li>
-            <li>No infracción</li>
-            <li>Precisión o fiabilidad</li>
-        </ul>
-
-        <h3>10.2 Limitación de Daños</h3>
-        <p>En ningún caso Gutigu será responsable por:</p>
-        <ul>
-            <li>Daños indirectos, incidentales o consecuentes</li>
-            <li>Pérdida de beneficios o ingresos</li>
-            <li>Pérdida de datos o información</li>
-            <li>Mensajes spam no detectados</li>
-            <li>Mensajes legítimos bloqueados incorrectamente</li>
-            <li>Cualquier daño que exceda la cantidad que pagaste por la aplicación (si aplica)</li>
-        </ul>
-
-        <div class="highlight-box">
-            <strong>Nota importante:</strong> Guardian Digital es una herramienta de ayuda para filtrar spam, pero no sustituye tu criterio personal. Siempre debes verificar la legitimidad de mensajes importantes antes de tomar acciones.
-        </div>
-
-        <h2>11. Indemnización</h2>
-
-        <p>Aceptas indemnizar y mantener indemne a Gutigu, sus directores, empleados y afiliados de cualquier reclamo, daño, obligación, pérdida, responsabilidad, costo o deuda, y gastos que surjan de:</p>
-        <ul>
-            <li>Tu uso o mal uso de Guardian Digital</li>
-            <li>Tu violación de estos Términos de Uso</li>
-            <li>Tu violación de derechos de terceros</li>
-            <li>Cualquier contenido que proporciones o transmitas</li>
-        </ul>
-
-        <h2>12. Terminación</h2>
-
-        <h3>12.1 Por tu Parte</h3>
-        <p>Puedes dejar de usar Guardian Digital en cualquier momento desinstalando la aplicación de tu dispositivo.</p>
-
-        <h3>12.2 Por Nuestra Parte</h3>
-        <p>Podemos suspender o terminar tu acceso a Guardian Digital si:</p>
-        <ul>
-            <li>Violas estos Términos de Uso</li>
-            <li>Usas la aplicación de manera fraudulenta o abusiva</li>
-            <li>Lo requerimos por ley</li>
-            <li>Decidimos discontinuar la aplicación</li>
-        </ul>
-
-        <h2>13. Ley Aplicable y Jurisdicción</h2>
-
-        <p>Estos Términos de Uso se rigen por las leyes de Colombia. Cualquier disputa relacionada con estos términos estará sujeta a la jurisdicción exclusiva de los tribunales competentes en Colombia.</p>
-
-        <h2>14. Resolución de Disputas</h2>
-
-        <p>En caso de cualquier disputa relacionada con Guardian Digital:</p>
-        <ol>
-            <li>Primero, intenta resolver el problema contactándonos directamente</li>
-            <li>Si no se resuelve, podremos acordar mediación antes de acudir a tribunales</li>
-            <li>Ambas partes renuncian al derecho a juicio por jurado</li>
-        </ol>
-
-        <h2>15. Disposiciones Generales</h2>
-
-        <h3>15.1 Acuerdo Completo</h3>
-        <p>Estos Términos de Uso, junto con nuestra Política de Privacidad, constituyen el acuerdo completo entre tú y Gutigu con respecto a Guardian Digital.</p>
-
-        <h3>15.2 Divisibilidad</h3>
-        <p>Si alguna disposición de estos términos se considera inválida o inaplicable, las disposiciones restantes seguirán en pleno vigor y efecto.</p>
-
-        <h3>15.3 Renuncia</h3>
-        <p>Nuestro fallo en hacer cumplir cualquier derecho o disposición no constituirá una renuncia a tal derecho o disposición.</p>
-
-        <h3>15.4 Cesión</h3>
-        <p>No puedes ceder o transferir estos términos sin nuestro consentimiento previo por escrito. Podemos ceder nuestros derechos sin restricciones.</p>
-
-        <h2>16. Contacto</h2>
-
-        <p>Si tienes preguntas, comentarios o inquietudes sobre estos Términos de Uso, contáctanos:</p>
-
-        <div class="highlight-box">
-            <strong>Gutigu</strong><br>
-            Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="21424e4f554042554e61465452554051510f424e4c0f424e">[email&#160;protected]</a><br>
-            Web: https://gutigu.com<br>
-            Aplicación: Guardian Digital
-        </div>
-
-        <h2>17. Reconocimiento</h2>
-
-        <p>Al usar Guardian Digital, reconoces que:</p>
-        <ul>
-            <li>Has leído y comprendido estos Términos de Uso</li>
-            <li>Aceptas estar legalmente vinculado por estos términos</li>
-            <li>Tienes la edad legal necesaria para aceptar estos términos</li>
-            <li>Usarás la aplicación de manera responsable y legal</li>
-        </ul>
-
-        <hr style="margin: 3rem 0; border: none; border-top: 1px solid #ddd;">
-
-        <p style="text-align: center; color: #666; font-size: 0.95rem;">
-            Estos Términos de Uso fueron actualizados por última vez el 12 de febrero de 2025.<br>
-            Guardian Digital es desarrollada por Gutigu.
-        </p>
+    <div class="intro-box ib-green">
+      <strong>Guardian Digital</strong> analiza tus SMS en el dispositivo para detectar fraudes.
+      <strong>Ningun mensaje ni dato personal sale de tu telefono.</strong>
     </div>
 
-    <footer>
-        <p>&copy; 2025 Gutigu. Todos los derechos reservados.</p>
-        <p><a href="
+    <section>
+      <h2><span class="n ng">1</span> Que es Guardian Digital?</h2>
+      <p>Guardian Digital protege a adultos mayores en Colombia contra fraudes por SMS (smishing). Analiza mensajes entrantes para detectar intentos de estafa que suplantan bancos (Nequi, Bancolombia, Daviplata), operadores (Claro, Tigo, Movistar) y entidades del gobierno (SIMIT, DIAN).</p>
+    </section>
+
+    <section>
+      <h2><span class="n ng">2</span> Informacion que procesamos</h2>
+      <div class="pill pg">Solo en tu dispositivo</div>
+      <ul>
+        <li><strong>Contenido de SMS recibidos:</strong> para analizar si contienen patrones de fraude.</li>
+        <li><strong>Numero del remitente:</strong> para verificar si es un familiar de confianza.</li>
+        <li><strong>Lista de familiares seguros:</strong> numeros que tu agregas manualmente.</li>
+        <li><strong>Mensajes bloqueados:</strong> guardados localmente para que puedas revisarlos.</li>
+      </ul>
+      <div class="hl hlg">
+        &#x2705; <strong>Todo el analisis ocurre dentro de tu telefono.</strong> No usamos servidores externos ni conexion a internet para procesar tus mensajes.
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="n ng">3</span> Permisos que solicitamos</h2>
+      <ul>
+        <li><strong>RECEIVE_SMS / READ_SMS:</strong> interceptar y analizar mensajes antes de que lleguen a tu bandeja.</li>
+        <li><strong>BIND_NOTIFICATION_LISTENER_SERVICE:</strong> cancelar notificaciones fraudulentas en Samsung y otros dispositivos.</li>
+        <li><strong>POST_NOTIFICATIONS:</strong> avisarte cuando se bloquea un mensaje sospechoso.</li>
+        <li><strong>RECEIVE_BOOT_COMPLETED:</strong> reactivar la proteccion automaticamente al reiniciar.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="n ng">4</span> Lo que NO hacemos</h2>
+      <ul>
+        <li>&#x274C; No enviamos tus mensajes a servidores externos.</li>
+        <li>&#x274C; No accedemos a tu ubicacion, camara ni microfono.</li>
+        <li>&#x274C; No compartimos informacion con terceros ni anunciantes.</li>
+        <li>&#x274C; No creamos perfiles de usuario ni hacemos seguimiento de comportamiento.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="n ng">5</span> Almacenamiento local</h2>
+      <p>Los mensajes sospechosos se guardan en el almacenamiento privado de la app en tu telefono. Solo son accesibles desde Guardian Digital, se eliminan al desinstalar la app, y puedes borrarlos manualmente desde la pantalla "Revision" en cualquier momento.</p>
+    </section>
+
+  </div>
+
+  <!-- SOSQUAKE -->
+  <div id="tab-sos" class="app-section">
+
+    <div class="intro-box ib-orange">
+      <strong>SOSquake</strong> es una app de seguridad personal y SOS. Accede a tu ubicacion, contactos y otros datos para ayudarte en emergencias.
+      <strong>Solo usamos tu informacion para prestarte el servicio de emergencia.</strong>
+    </div>
+
+    <section>
+      <h2><span class="n no">1</span> Que es SOSquake?</h2>
+      <p>SOSquake es una aplicacion de seguridad personal que te permite enviar alertas de emergencia (SOS) a tus contactos de confianza. Esta disenada para situaciones criticas en las que necesitas ayuda rapida.</p>
+    </section>
+
+    <section>
+      <h2><span class="n no">2</span> Informacion que procesamos</h2>
+      <div class="pill po">Para el servicio de emergencia</div>
+      <ul>
+        <li><strong>Ubicacion GPS:</strong> para incluir tu posicion en las alertas de emergencia enviadas a tus contactos.</li>
+        <li><strong>Contactos de emergencia:</strong> numeros que designas como receptores de tus alertas SOS.</li>
+        <li><strong>Informacion de contactos:</strong> nombre y telefono para mostrar tus contactos de emergencia dentro de la app.</li>
+        <li><strong>SMS:</strong> para enviar alertas de emergencia con tu ubicacion a tus contactos designados.</li>
+        <li><strong>Microfono / Camara:</strong> si activas grabacion de evidencia durante una emergencia.</li>
+        <li><strong>Notificaciones del sistema:</strong> para recibir y enviar alertas criticas.</li>
+      </ul>
+      <div class="hl hlo">
+        &#x26A0;&#xFE0F; <strong>Tu ubicacion solo se comparte con los contactos de emergencia que tu eliges.</strong> No la enviamos a terceros ni la almacenamos en servidores propios.
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="n no">3</span> Permisos que solicitamos</h2>
+      <ul>
+        <li><strong>ACCESS_FINE_LOCATION:</strong> obtener tu posicion GPS para incluirla en alertas SOS.</li>
+        <li><strong>READ_CONTACTS:</strong> permitirte seleccionar contactos de emergencia desde tu agenda.</li>
+        <li><strong>SEND_SMS / READ_SMS:</strong> enviar y gestionar alertas de emergencia por mensaje de texto.</li>
+        <li><strong>RECORD_AUDIO / CAMERA:</strong> grabar evidencia de audio o video durante una emergencia (solo cuando lo activas manualmente).</li>
+        <li><strong>POST_NOTIFICATIONS:</strong> enviarte alertas y confirmaciones de SOS.</li>
+        <li><strong>RECEIVE_BOOT_COMPLETED:</strong> mantener activa la proteccion despues de reiniciar.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="n no">4</span> Como usamos tu ubicacion</h2>
+      <p>La ubicacion GPS se obtiene <strong>unicamente cuando activas una alerta SOS</strong> o cuando el monitoreo en segundo plano esta activado por ti explicitamente. Nunca rastreamos tu ubicacion de forma pasiva. Tu ubicacion:</p>
+      <ul>
+        <li>Se incluye en el mensaje SOS enviado a tus contactos de emergencia.</li>
+        <li>No se almacena en nuestros servidores.</li>
+        <li>No se comparte con anunciantes ni terceros.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="n no">5</span> Grabaciones de emergencia</h2>
+      <p>Si activas la grabacion de audio o video durante una emergencia, los archivos se guardan localmente en tu dispositivo. Son accesibles solo desde SOSquake y se eliminan al desinstalar la app. No los subimos a servidores sin tu consentimiento explicito.</p>
+    </section>
+
+    <section>
+      <h2><span class="n no">6</span> Lo que NO hacemos</h2>
+      <ul>
+        <li>&#x274C; No rastreamos tu ubicacion en segundo plano sin que lo actives.</li>
+        <li>&#x274C; No accedemos al microfono ni camara fuera de emergencias activas.</li>
+        <li>&#x274C; No leemos tus SMS personales, solo los relacionados con alertas SOS.</li>
+        <li>&#x274C; No compartimos tus contactos con terceros ni anunciantes.</li>
+        <li>&#x274C; No vendemos ningun dato personal.</li>
+      </ul>
+    </section>
+
+  </div>
+
+  <!-- DISPOSICIONES COMUNES -->
+  <div id="tab-shared" class="app-section">
+
+    <div class="intro-box ib-blue">
+      Las siguientes disposiciones aplican a <strong>Guardian Digital</strong> y <strong>SOSquake</strong> por igual.
+    </div>
+
+    <section>
+      <h2><span class="n nb">1</span> Compartir informacion con terceros</h2>
+      <p>No vendemos, alquilamos ni cedemos tu informacion personal a terceros. La unica excepcion seria si una autoridad judicial colombiana competente lo requiriera mediante orden legal, en cuyo caso cooperariamos dentro del marco de la ley.</p>
+    </section>
+
+    <section>
+      <h2><span class="n nb">2</span> Seguridad</h2>
+      <p>La mayor parte del procesamiento ocurre directamente en tu dispositivo, lo que minimiza el riesgo de exposicion externa. Te recomendamos proteger tu telefono con PIN, patron o huella dactilar.</p>
+    </section>
+
+    <section>
+      <h2><span class="n nb">3</span> Menores de edad</h2>
+      <p>Nuestras aplicaciones no estan dirigidas a menores de 13 anos y no recopilamos intencionalmente informacion de menores. Si eres padre o tutor y crees que tu hijo ha proporcionado informacion personal, contactanos para eliminarla.</p>
+    </section>
+
+    <section>
+      <h2><span class="n nb">4</span> Tus derechos</h2>
+      <p>En cualquier momento puedes:</p>
+      <ul>
+        <li>Revisar y eliminar datos almacenados desde la interfaz de cada app.</li>
+        <li>Revocar permisos desde Ajustes > Aplicaciones en tu telefono.</li>
+        <li>Desinstalar la app, eliminando todos los datos locales.</li>
+        <li>Contactarnos para solicitar informacion sobre tus datos.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="n nb">5</span> Cambios a esta politica</h2>
+      <p>Si realizamos cambios significativos actualizaremos la fecha al inicio del documento. El uso continuado de las aplicaciones tras la publicacion de cambios constituye aceptacion de la nueva politica.</p>
+    </section>
+
+    <div class="contact-box">
+      <h2>Tienes preguntas?</h2>
+      <p>Para dudas sobre privacidad en cualquiera de nuestras apps, escribenos a:</p>
+      <br>
+      <p><a href="mailto:contacto@guardiansms.app">contacto@guardiansms.app</a></p>
+      <br>
+      <p style="font-size:0.83rem;color:rgba(255,255,255,0.4);">Respondemos en un plazo maximo de 5 dias habiles.</p>
+    </div>
+
+  </div>
+
+</main>
+
+<footer>
+  &copy; 2026 Guardian Digital &amp; SOSquake &middot; Todos los derechos reservados
+</footer>
+
+<script>
+  function show(name, el, color) {
+    document.querySelectorAll('.app-section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('green','orange','blue'));
+    document.getElementById('tab-' + name).classList.add('active');
+    el.classList.add(color);
+  }
+</script>
+
+</body>
+</html>

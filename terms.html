@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Política de Privacidad – Guardian Digital & SOSquake</title>
+<title>Terminos de Uso - GUTIGU</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap');
 
@@ -34,11 +34,20 @@
     text-align: center;
   }
 
+  .gutigu-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.12em;
+    color: var(--green);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+  }
+
   .app-badges {
     display: flex;
     justify-content: center;
-    gap: 14px;
-    margin-bottom: 20px;
+    gap: 12px;
+    margin: 16px 0 20px;
     flex-wrap: wrap;
   }
 
@@ -46,22 +55,23 @@
     display: inline-flex;
     align-items: center;
     gap: 7px;
-    padding: 7px 18px;
+    padding: 6px 16px;
     border-radius: 30px;
-    font-size: 0.88rem;
+    font-size: 0.85rem;
     font-weight: 600;
   }
 
-  .badge-green { background: var(--green); color: #003d22; }
+  .badge-green  { background: var(--green);  color: #003d22; }
   .badge-orange { background: var(--orange); color: white; }
+  .badge-blue   { background: #3b6fd4;       color: white; }
 
   header h1 {
     font-family: 'DM Serif Display', serif;
-    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    font-size: clamp(1.4rem, 4vw, 2rem);
     margin-bottom: 8px;
   }
 
-  header p { color: rgba(255,255,255,0.6); font-size: 0.9rem; }
+  header p { color: rgba(255,255,255,0.55); font-size: 0.88rem; }
 
   .tabs {
     display: flex;
@@ -73,21 +83,21 @@
 
   .tab {
     flex: 1;
-    padding: 14px 8px;
+    padding: 13px 6px;
     text-align: center;
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     font-weight: 600;
     cursor: pointer;
-    color: rgba(255,255,255,0.45);
+    color: rgba(255,255,255,0.4);
     border-bottom: 3px solid transparent;
     transition: all 0.2s;
     user-select: none;
   }
 
-  .tab.green { color: var(--green); border-color: var(--green); }
-  .tab.orange { color: #ff7033; border-color: #ff7033; }
-  .tab.blue { color: #6fa3ff; border-color: #6fa3ff; }
-  .tab:not(.green):not(.orange):not(.blue):hover { color: rgba(255,255,255,0.8); }
+  .tab.green  { color: var(--green); border-color: var(--green); }
+  .tab.orange { color: #ff7033;      border-color: #ff7033; }
+  .tab.blue   { color: #6fa3ff;      border-color: #6fa3ff; }
+  .tab:not(.green):not(.orange):not(.blue):hover { color: rgba(255,255,255,0.75); }
 
   main {
     max-width: 760px;
@@ -105,9 +115,9 @@
     font-size: 0.94rem;
   }
 
-  .ib-green { background: #e6f9f0; border-left: 4px solid var(--green); color: #1a4d33; }
+  .ib-green  { background: #e6f9f0; border-left: 4px solid var(--green);  color: #1a4d33; }
   .ib-orange { background: #fff3ec; border-left: 4px solid var(--orange); color: #6b2500; }
-  .ib-blue { background: #eef3fb; border-left: 4px solid var(--blue); color: var(--muted); }
+  .ib-blue   { background: #eef3fb; border-left: 4px solid var(--blue);   color: var(--muted); }
 
   section {
     background: white;
@@ -139,9 +149,9 @@
     flex-shrink: 0;
   }
 
-  .ng { background: var(--green); color: #003d22; }
+  .ng { background: var(--green);  color: #003d22; }
   .no { background: var(--orange); color: white; }
-  .nb { background: var(--navy); color: white; }
+  .nb { background: var(--navy);   color: white; }
 
   p { margin-bottom: 10px; font-size: 0.95rem; }
   p:last-child { margin-bottom: 0; }
@@ -150,7 +160,7 @@
 
   .pill {
     display: inline-block;
-    font-size: 0.73rem;
+    font-size: 0.72rem;
     font-weight: 700;
     padding: 2px 10px;
     border-radius: 20px;
@@ -161,6 +171,7 @@
 
   .pg { background: #e6f9f0; color: #007a43; }
   .po { background: #fff0e6; color: #b34400; }
+  .pb { background: #eef3fb; color: #1a3a6e; }
 
   .hl {
     border-radius: 8px;
@@ -171,6 +182,7 @@
 
   .hlg { background: #f0faf5; border: 1px solid #a3e4c3; color: #1a5c38; }
   .hlo { background: #fff5f0; border: 1px solid #f5c0a0; color: #7a2e00; }
+  .hlb { background: #f0f4fb; border: 1px solid #b0c4e8; color: #1a3a6e; }
 
   .contact-box {
     background: var(--navy);
@@ -183,224 +195,380 @@
 
   .contact-box h2 {
     font-family: 'DM Serif Display', serif;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
+    color: white;
     margin-bottom: 10px;
+    justify-content: center;
   }
 
   .contact-box p { color: rgba(255,255,255,0.65); font-size: 0.93rem; }
   .contact-box a { color: var(--green); text-decoration: none; font-weight: 600; }
 
-  footer {
+  footer-bar {
+    display: block;
     text-align: center;
-    padding: 22px;
-    color: var(--muted);
+    padding: 18px;
     font-size: 0.82rem;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+    margin-top: 20px;
+  }
+
+  footer-bar a { color: var(--blue); text-decoration: none; }
+
+  @media (max-width: 520px) {
+    section { padding: 18px 16px; }
+    header  { padding: 36px 16px 28px; }
   }
 </style>
 </head>
 <body>
 
 <header>
+  <div class="gutigu-logo">GUTIGU</div>
+  <h1>Terminos de Uso</h1>
   <div class="app-badges">
-    <span class="badge badge-green">&#x1F6E1;&#xFE0F; Guardian Digital</span>
-    <span class="badge badge-orange">&#x1F6A8; SOSquake</span>
+    <span class="badge badge-green">&#128737; Guardian Digital</span>
+    <span class="badge badge-orange">&#128680; SOSquake</span>
+    <span class="badge badge-blue">&#128197; Vigente desde marzo 2026</span>
   </div>
-  <h1>Politica de Privacidad</h1>
-  <p>Ultima actualizacion: Marzo 2026</p>
+  <p>Aplicaciones gratuitas para adultos mayores de 18 anos &mdash; Bogota, Colombia</p>
 </header>
 
 <div class="tabs">
-  <div class="tab green" onclick="show('guardian',this,'green')">&#x1F6E1;&#xFE0F; Guardian Digital</div>
-  <div class="tab" onclick="show('sos',this,'orange')">&#x1F6A8; SOSquake</div>
-  <div class="tab" onclick="show('shared',this,'blue')">&#x1F4CB; Disposiciones Comunes</div>
+  <div class="tab green"    onclick="show('guardian', this)">&#128737; Guardian Digital</div>
+  <div class="tab"          onclick="show('sosquake', this)">&#128680; SOSquake</div>
+  <div class="tab"          onclick="show('comunes',  this)">&#128218; Disposiciones comunes</div>
 </div>
 
 <main>
 
-  <!-- GUARDIAN DIGITAL -->
-  <div id="tab-guardian" class="app-section active">
+  <!-- ===== GUARDIAN DIGITAL ===== -->
+  <div id="guardian" class="app-section active">
 
     <div class="intro-box ib-green">
-      <strong>Guardian Digital</strong> analiza tus SMS en el dispositivo para detectar fraudes.
-      <strong>Ningun mensaje ni dato personal sale de tu telefono.</strong>
+      <strong>&#128737; Guardian Digital</strong> es una aplicacion gratuita que analiza mensajes SMS
+      en tu dispositivo para ayudarte a identificar posibles fraudes o mensajes no deseados.
+      Todo el procesamiento ocurre localmente en tu celular.
     </div>
 
     <section>
-      <h2><span class="n ng">1</span> Que es Guardian Digital?</h2>
-      <p>Guardian Digital protege a adultos mayores en Colombia contra fraudes por SMS (smishing). Analiza mensajes entrantes para detectar intentos de estafa que suplantan bancos (Nequi, Bancolombia, Daviplata), operadores (Claro, Tigo, Movistar) y entidades del gobierno (SIMIT, DIAN).</p>
+      <h2><span class="n ng">1</span> Aceptacion de los terminos</h2>
+      <p>Al descargar, instalar o usar Guardian Digital confirmas que tienes al menos
+        <strong>18 anos de edad</strong> y que aceptas estos terminos de uso en su totalidad.</p>
+      <p>Si no estas de acuerdo con alguna parte, por favor desinstala la aplicacion.</p>
     </section>
 
     <section>
-      <h2><span class="n ng">2</span> Informacion que procesamos</h2>
-      <div class="pill pg">Solo en tu dispositivo</div>
+      <h2><span class="n ng">2</span> Descripcion del servicio</h2>
+      <span class="pill pg">100% gratuita</span>
+      <p>Guardian Digital ofrece las siguientes funciones, todas sin costo:</p>
       <ul>
-        <li><strong>Contenido de SMS recibidos:</strong> para analizar si contienen patrones de fraude.</li>
-        <li><strong>Numero del remitente:</strong> para verificar si es un familiar de confianza.</li>
-        <li><strong>Lista de familiares seguros:</strong> numeros que tu agregas manualmente.</li>
-        <li><strong>Mensajes bloqueados:</strong> guardados localmente para que puedas revisarlos.</li>
+        <li>Analisis automatico de mensajes SMS recibidos para detectar patrones de fraude.</li>
+        <li>Notificaciones de alerta cuando se identifica un mensaje sospechoso.</li>
+        <li>Bloqueo de mensajes que superen el umbral de riesgo configurado.</li>
+        <li>Registro local de mensajes analizados (almacenado unicamente en tu dispositivo).</li>
       </ul>
       <div class="hl hlg">
-        &#x2705; <strong>Todo el analisis ocurre dentro de tu telefono.</strong> No usamos servidores externos ni conexion a internet para procesar tus mensajes.
+        La aplicacion no tiene funciones de pago, suscripciones ni compras dentro de la app.
       </div>
     </section>
 
     <section>
-      <h2><span class="n ng">3</span> Permisos que solicitamos</h2>
+      <h2><span class="n ng">3</span> Limitacion de responsabilidad por fraudes</h2>
+      <p>Guardian Digital es una herramienta de apoyo, no un sistema de seguridad infalible.
+        Al usar la aplicacion reconoces y aceptas que:</p>
       <ul>
-        <li><strong>RECEIVE_SMS / READ_SMS:</strong> interceptar y analizar mensajes antes de que lleguen a tu bandeja.</li>
-        <li><strong>BIND_NOTIFICATION_LISTENER_SERVICE:</strong> cancelar notificaciones fraudulentas en Samsung y otros dispositivos.</li>
-        <li><strong>POST_NOTIFICATIONS:</strong> avisarte cuando se bloquea un mensaje sospechoso.</li>
-        <li><strong>RECEIVE_BOOT_COMPLETED:</strong> reactivar la proteccion automaticamente al reiniciar.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2><span class="n ng">4</span> Lo que NO hacemos</h2>
-      <ul>
-        <li>&#x274C; No enviamos tus mensajes a servidores externos.</li>
-        <li>&#x274C; No accedemos a tu ubicacion, camara ni microfono.</li>
-        <li>&#x274C; No compartimos informacion con terceros ni anunciantes.</li>
-        <li>&#x274C; No creamos perfiles de usuario ni hacemos seguimiento de comportamiento.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2><span class="n ng">5</span> Almacenamiento local</h2>
-      <p>Los mensajes sospechosos se guardan en el almacenamiento privado de la app en tu telefono. Solo son accesibles desde Guardian Digital, se eliminan al desinstalar la app, y puedes borrarlos manualmente desde la pantalla "Revision" en cualquier momento.</p>
-    </section>
-
-  </div>
-
-  <!-- SOSQUAKE -->
-  <div id="tab-sos" class="app-section">
-
-    <div class="intro-box ib-orange">
-      <strong>SOSquake</strong> es una app de seguridad personal y SOS. Accede a tu ubicacion, contactos y otros datos para ayudarte en emergencias.
-      <strong>Solo usamos tu informacion para prestarte el servicio de emergencia.</strong>
-    </div>
-
-    <section>
-      <h2><span class="n no">1</span> Que es SOSquake?</h2>
-      <p>SOSquake es una aplicacion de seguridad personal que te permite enviar alertas de emergencia (SOS) a tus contactos de confianza. Esta disenada para situaciones criticas en las que necesitas ayuda rapida.</p>
-    </section>
-
-    <section>
-      <h2><span class="n no">2</span> Informacion que procesamos</h2>
-      <div class="pill po">Para el servicio de emergencia</div>
-      <ul>
-        <li><strong>Ubicacion GPS:</strong> para incluir tu posicion en las alertas de emergencia enviadas a tus contactos.</li>
-        <li><strong>Contactos de emergencia:</strong> numeros que designas como receptores de tus alertas SOS.</li>
-        <li><strong>Informacion de contactos:</strong> nombre y telefono para mostrar tus contactos de emergencia dentro de la app.</li>
-        <li><strong>SMS:</strong> para enviar alertas de emergencia con tu ubicacion a tus contactos designados.</li>
-        <li><strong>Microfono / Camara:</strong> si activas grabacion de evidencia durante una emergencia.</li>
-        <li><strong>Notificaciones del sistema:</strong> para recibir y enviar alertas criticas.</li>
+        <li><strong>GUTIGU no garantiza el bloqueo total de mensajes fraudulentos.</strong>
+          Los patrones de fraude cambian constantemente y algunos mensajes podrian no ser detectados.</li>
+        <li>La aplicacion puede en casos excepcionales marcar como sospechoso un mensaje legitimo.</li>
+        <li>La decision final sobre que hacer con un mensaje siempre es tuya.</li>
+        <li>GUTIGU no es responsable por danos economicos o de otro tipo derivados de fraudes
+          que la aplicacion no haya detectado.</li>
       </ul>
       <div class="hl hlo">
-        &#x26A0;&#xFE0F; <strong>Tu ubicacion solo se comparte con los contactos de emergencia que tu eliges.</strong> No la enviamos a terceros ni la almacenamos en servidores propios.
+        Si recibes un mensaje que parece urgente o te pide dinero, verifica siempre directamente
+        con la entidad o persona involucrada antes de actuar.
       </div>
     </section>
 
     <section>
-      <h2><span class="n no">3</span> Permisos que solicitamos</h2>
+      <h2><span class="n ng">4</span> Uso correcto de la aplicacion</h2>
+      <p>Al usar Guardian Digital te comprometes a:</p>
       <ul>
-        <li><strong>ACCESS_FINE_LOCATION:</strong> obtener tu posicion GPS para incluirla en alertas SOS.</li>
-        <li><strong>READ_CONTACTS:</strong> permitirte seleccionar contactos de emergencia desde tu agenda.</li>
-        <li><strong>SEND_SMS / READ_SMS:</strong> enviar y gestionar alertas de emergencia por mensaje de texto.</li>
-        <li><strong>RECORD_AUDIO / CAMERA:</strong> grabar evidencia de audio o video durante una emergencia (solo cuando lo activas manualmente).</li>
-        <li><strong>POST_NOTIFICATIONS:</strong> enviarte alertas y confirmaciones de SOS.</li>
-        <li><strong>RECEIVE_BOOT_COMPLETED:</strong> mantener activa la proteccion despues de reiniciar.</li>
+        <li>Usar la aplicacion unicamente para proteger tu propio dispositivo.</li>
+        <li>No intentar modificar, descompilar o alterar el codigo de la aplicacion.</li>
+        <li>No usar la aplicacion para vigilar o interceptar mensajes de terceros sin su consentimiento.</li>
+        <li>Mantener el sistema operativo y la aplicacion actualizados para su correcto funcionamiento.</li>
       </ul>
     </section>
 
     <section>
-      <h2><span class="n no">4</span> Como usamos tu ubicacion</h2>
-      <p>La ubicacion GPS se obtiene <strong>unicamente cuando activas una alerta SOS</strong> o cuando el monitoreo en segundo plano esta activado por ti explicitamente. Nunca rastreamos tu ubicacion de forma pasiva. Tu ubicacion:</p>
+      <h2><span class="n ng">5</span> Permisos requeridos</h2>
+      <p>Para funcionar correctamente, Guardian Digital solicita los siguientes permisos en tu dispositivo:</p>
       <ul>
-        <li>Se incluye en el mensaje SOS enviado a tus contactos de emergencia.</li>
-        <li>No se almacena en nuestros servidores.</li>
-        <li>No se comparte con anunciantes ni terceros.</li>
+        <li><strong>Recibir y leer SMS:</strong> para analizar los mensajes entrantes.</li>
+        <li><strong>Mostrar notificaciones:</strong> para alertarte sobre mensajes sospechosos.</li>
+        <li><strong>Escuchar notificaciones del sistema:</strong> para detectar mensajes en dispositivos Samsung.</li>
+        <li><strong>Inicio automatico:</strong> para activarse cuando enciendes el celular.</li>
       </ul>
+      <p>Ninguno de estos permisos se usa para recopilar ni enviar tu informacion a servidores externos.</p>
     </section>
 
     <section>
-      <h2><span class="n no">5</span> Grabaciones de emergencia</h2>
-      <p>Si activas la grabacion de audio o video durante una emergencia, los archivos se guardan localmente en tu dispositivo. Son accesibles solo desde SOSquake y se eliminan al desinstalar la app. No los subimos a servidores sin tu consentimiento explicito.</p>
-    </section>
-
-    <section>
-      <h2><span class="n no">6</span> Lo que NO hacemos</h2>
-      <ul>
-        <li>&#x274C; No rastreamos tu ubicacion en segundo plano sin que lo actives.</li>
-        <li>&#x274C; No accedemos al microfono ni camara fuera de emergencias activas.</li>
-        <li>&#x274C; No leemos tus SMS personales, solo los relacionados con alertas SOS.</li>
-        <li>&#x274C; No compartimos tus contactos con terceros ni anunciantes.</li>
-        <li>&#x274C; No vendemos ningun dato personal.</li>
-      </ul>
-    </section>
-
-  </div>
-
-  <!-- DISPOSICIONES COMUNES -->
-  <div id="tab-shared" class="app-section">
-
-    <div class="intro-box ib-blue">
-      Las siguientes disposiciones aplican a <strong>Guardian Digital</strong> y <strong>SOSquake</strong> por igual.
-    </div>
-
-    <section>
-      <h2><span class="n nb">1</span> Compartir informacion con terceros</h2>
-      <p>No vendemos, alquilamos ni cedemos tu informacion personal a terceros. La unica excepcion seria si una autoridad judicial colombiana competente lo requiriera mediante orden legal, en cuyo caso cooperariamos dentro del marco de la ley.</p>
-    </section>
-
-    <section>
-      <h2><span class="n nb">2</span> Seguridad</h2>
-      <p>La mayor parte del procesamiento ocurre directamente en tu dispositivo, lo que minimiza el riesgo de exposicion externa. Te recomendamos proteger tu telefono con PIN, patron o huella dactilar.</p>
-    </section>
-
-    <section>
-      <h2><span class="n nb">3</span> Menores de edad</h2>
-      <p>Nuestras aplicaciones no estan dirigidas a menores de 13 anos y no recopilamos intencionalmente informacion de menores. Si eres padre o tutor y crees que tu hijo ha proporcionado informacion personal, contactanos para eliminarla.</p>
-    </section>
-
-    <section>
-      <h2><span class="n nb">4</span> Tus derechos</h2>
-      <p>En cualquier momento puedes:</p>
-      <ul>
-        <li>Revisar y eliminar datos almacenados desde la interfaz de cada app.</li>
-        <li>Revocar permisos desde Ajustes > Aplicaciones en tu telefono.</li>
-        <li>Desinstalar la app, eliminando todos los datos locales.</li>
-        <li>Contactarnos para solicitar informacion sobre tus datos.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2><span class="n nb">5</span> Cambios a esta politica</h2>
-      <p>Si realizamos cambios significativos actualizaremos la fecha al inicio del documento. El uso continuado de las aplicaciones tras la publicacion de cambios constituye aceptacion de la nueva politica.</p>
+      <h2><span class="n ng">6</span> Disponibilidad del servicio</h2>
+      <p>GUTIGU se reserva el derecho de suspender, modificar o descontinuar Guardian Digital
+        en cualquier momento, con o sin previo aviso, por razones tecnicas, legales o de negocio.</p>
+      <p>En caso de cambios importantes, intentaremos informarte a traves de la aplicacion o
+        de los canales de comunicacion disponibles.</p>
     </section>
 
     <div class="contact-box">
-      <h2>Tienes preguntas?</h2>
-      <p>Para dudas sobre privacidad en cualquiera de nuestras apps, escribenos a:</p>
-      <br>
-      <p><a href="mailto:contacto@guardiansms.app">contacto@guardiansms.app</a></p>
-      <br>
-      <p style="font-size:0.83rem;color:rgba(255,255,255,0.4);">Respondemos en un plazo maximo de 5 dias habiles.</p>
+      <h2>&#128737; Preguntas sobre Guardian Digital</h2>
+      <p>Si tienes dudas sobre estos terminos o sobre el funcionamiento de la app,<br>
+         escribenos a <a href="mailto:contacto@gutigu.com">contacto@gutigu.com</a></p>
     </div>
 
-  </div>
+  </div><!-- /guardian -->
+
+
+  <!-- ===== SOSQUAKE ===== -->
+  <div id="sosquake" class="app-section">
+
+    <div class="intro-box ib-orange">
+      <strong>&#128680; SOSquake</strong> es una aplicacion gratuita de seguridad personal
+      que te permite enviar alertas de emergencia a contactos de confianza, compartir tu
+      ubicacion en tiempo real y activar funciones de auxilio desde tu celular.
+    </div>
+
+    <section>
+      <h2><span class="n no">1</span> Aceptacion de los terminos</h2>
+      <p>Al descargar, instalar o usar SOSquake confirmas que tienes al menos
+        <strong>18 anos de edad</strong> y que aceptas estos terminos en su totalidad.</p>
+      <p>Si no estas de acuerdo con alguna parte, por favor desinstala la aplicacion.</p>
+    </section>
+
+    <section>
+      <h2><span class="n no">2</span> Descripcion del servicio</h2>
+      <span class="pill po">100% gratuita</span>
+      <p>SOSquake ofrece las siguientes funciones sin costo alguno:</p>
+      <ul>
+        <li>Envio de mensajes de alerta de emergencia a contactos previamente configurados.</li>
+        <li>Compartir ubicacion GPS con esos contactos durante una emergencia.</li>
+        <li>Activacion rapida de alerta mediante boton de panico.</li>
+        <li>Grabacion de audio o video como evidencia durante una emergencia (segun configuracion).</li>
+        <li>Inicio automatico al encender el dispositivo para estar siempre disponible.</li>
+      </ul>
+      <div class="hl hlo">
+        La aplicacion no tiene funciones de pago, suscripciones ni compras dentro de la app.
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="n no">3</span> Responsabilidad sobre los contactos de emergencia</h2>
+      <p>SOSquake funciona enviando alertas a los contactos que <strong>tu mismo configuras</strong>.
+        Al usar la aplicacion reconoces y aceptas que:</p>
+      <ul>
+        <li><strong>Eres el unico responsable de seleccionar y mantener actualizados tus contactos de emergencia.</strong></li>
+        <li>Debes obtener el consentimiento de cada persona antes de agregarla como contacto.</li>
+        <li>GUTIGU no verifica ni garantiza que los contactos configurados reciban, lean o respondan
+          las alertas enviadas.</li>
+        <li>GUTIGU no es responsable si un contacto no responde o si la alerta no llega por problemas
+          de red, bateria u otros factores fuera de nuestro control.</li>
+        <li>Eres responsable de mantener el numero de telefono y datos de tus contactos actualizados
+          dentro de la aplicacion.</li>
+      </ul>
+      <div class="hl hlo">
+        En una emergencia real, siempre intenta contactar tambien a los servicios de emergencia oficiales:
+        <strong>Linea 123</strong> (emergencias Colombia) o <strong>Linea 112</strong>.
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="n no">4</span> Limitacion de responsabilidad</h2>
+      <p>SOSquake es una herramienta de apoyo a la seguridad personal, no un servicio de emergencias
+        certificado. Al usarla reconoces que:</p>
+      <ul>
+        <li>GUTIGU no garantiza que la alerta llegue en todos los escenarios posibles.</li>
+        <li>El correcto funcionamiento depende de factores externos como cobertura de red,
+          bateria del dispositivo y permisos del sistema operativo.</li>
+        <li>GUTIGU no es responsable por danos fisicos, economicos o de otro tipo que ocurran
+          durante o despues de una emergencia, independientemente del funcionamiento de la app.</li>
+        <li>La aplicacion no reemplaza a los cuerpos oficiales de emergencia ni a los servicios
+          de seguridad del Estado.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="n no">5</span> Permisos requeridos</h2>
+      <p>Para funcionar correctamente, SOSquake solicita los siguientes permisos:</p>
+      <ul>
+        <li><strong>Ubicacion precisa:</strong> para compartir tu posicion con los contactos de emergencia.</li>
+        <li><strong>Contactos:</strong> para seleccionar y gestionar tus contactos de confianza.</li>
+        <li><strong>Enviar y leer SMS:</strong> para enviar alertas de emergencia por mensaje de texto.</li>
+        <li><strong>Camara y microfono:</strong> para grabacion de evidencia (solo se activa cuando tu lo decides).</li>
+        <li><strong>Mostrar notificaciones:</strong> para confirmaciones y alertas del sistema.</li>
+        <li><strong>Inicio automatico:</strong> para estar disponible desde que enciendes el celular.</li>
+      </ul>
+      <p>Estos permisos se usan <strong>unicamente</strong> para las funciones descritas.
+        Tu ubicacion solo se comparte con los contactos que tu hayas configurado y solo durante
+        una alerta activa. No se almacena en servidores de GUTIGU.</p>
+    </section>
+
+    <section>
+      <h2><span class="n no">6</span> Uso correcto de la aplicacion</h2>
+      <p>Al usar SOSquake te comprometes a:</p>
+      <ul>
+        <li>Usar la aplicacion unicamente para situaciones de emergencia real o para pruebas
+          acordadas con tus contactos.</li>
+        <li>No activar alertas falsas de manera intencional.</li>
+        <li>Obtener el consentimiento de las personas que agregas como contactos de emergencia.</li>
+        <li>No usar la aplicacion para vigilar o rastrear a terceros sin su consentimiento.</li>
+        <li>Mantener la informacion de contacto actualizada para garantizar que las alertas lleguen.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="n no">7</span> Disponibilidad del servicio</h2>
+      <p>GUTIGU se reserva el derecho de suspender, modificar o descontinuar SOSquake
+        en cualquier momento, con o sin previo aviso, por razones tecnicas, legales o de negocio.</p>
+      <p>En caso de cambios importantes, intentaremos informarte a traves de la aplicacion o
+        de los canales de comunicacion disponibles.</p>
+    </section>
+
+    <div class="contact-box">
+      <h2>&#128680; Preguntas sobre SOSquake</h2>
+      <p>Si tienes dudas sobre estos terminos o sobre el funcionamiento de la app,<br>
+         escribenos a <a href="mailto:contacto@gutigu.com">contacto@gutigu.com</a></p>
+    </div>
+
+  </div><!-- /sosquake -->
+
+
+  <!-- ===== DISPOSICIONES COMUNES ===== -->
+  <div id="comunes" class="app-section">
+
+    <div class="intro-box ib-blue">
+      Las siguientes disposiciones aplican a <strong>ambas aplicaciones</strong>:
+      Guardian Digital y SOSquake, desarrolladas y distribuidas por GUTIGU.
+    </div>
+
+    <section>
+      <h2><span class="n nb">1</span> Identificacion del responsable</h2>
+      <p>Las aplicaciones Guardian Digital y SOSquake son desarrolladas y distribuidas por
+        <strong>GUTIGU</strong>, plataforma de tecnologia para adultos con sede en
+        <strong>Bogota, Colombia</strong>.</p>
+      <p>Contacto: <a href="mailto:contacto@gutigu.com">contacto@gutigu.com</a> &mdash;
+        Sitio web: <a href="https://gutigu.com">gutigu.com</a></p>
+    </section>
+
+    <section>
+      <h2><span class="n nb">2</span> Edad minima</h2>
+      <p>Ambas aplicaciones estan destinadas a personas mayores de <strong>18 anos</strong>.
+        Si eres menor de edad, no debes usar estas aplicaciones.</p>
+      <p>GUTIGU no recopila intencionalmente informacion de menores de edad. Si detectamos que
+        un usuario es menor de 18 anos, procederemos a eliminar su informacion.</p>
+    </section>
+
+    <section>
+      <h2><span class="n nb">3</span> Gratuidad y ausencia de publicidad</h2>
+      <span class="pill pb">Sin costo</span>
+      <p>Ambas aplicaciones son completamente gratuitas. No tienen:</p>
+      <ul>
+        <li>Suscripciones de pago.</li>
+        <li>Compras dentro de la aplicacion.</li>
+        <li>Publicidad de terceros.</li>
+        <li>Modelos freemium con funciones bloqueadas.</li>
+      </ul>
+      <div class="hl hlb">
+        GUTIGU podra en el futuro ofrecer versiones con funciones adicionales. Cualquier cambio
+        sera comunicado con anticipacion y requerira tu aceptacion expresa.
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="n nb">4</span> Propiedad intelectual</h2>
+      <p>Todo el contenido de las aplicaciones &mdash; codigo, diseno, nombre, logotipos,
+        textos e iconos &mdash; es propiedad de GUTIGU y esta protegido por las leyes de
+        propiedad intelectual vigentes en Colombia.</p>
+      <p>Queda prohibido reproducir, distribuir, modificar o crear obras derivadas sin
+        autorizacion escrita de GUTIGU.</p>
+    </section>
+
+    <section>
+      <h2><span class="n nb">5</span> Suspension del servicio</h2>
+      <p>GUTIGU se reserva el derecho de suspender el acceso a cualquiera de las aplicaciones,
+        de forma temporal o definitiva, en los siguientes casos:</p>
+      <ul>
+        <li>Mantenimiento tecnico o actualizaciones del sistema.</li>
+        <li>Uso indebido o fraudulento de la aplicacion.</li>
+        <li>Cambios en las politicas de distribuidores como Google Play Store.</li>
+        <li>Decisiones de negocio o razones legales.</li>
+      </ul>
+      <p>GUTIGU no sera responsable por perjuicios derivados de la suspension del servicio,
+        excepto en los casos expresamente previstos por la ley colombiana.</p>
+    </section>
+
+    <section>
+      <h2><span class="n nb">6</span> Privacidad y datos personales</h2>
+      <p>El tratamiento de datos personales en ambas aplicaciones se rige por nuestra
+        <strong>Politica de Privacidad</strong>, disponible en:</p>
+      <p style="margin-top:8px;">
+        <a href="/privacidad.html" style="color: var(--blue); font-weight: 600;">
+          gutigu.com/privacidad.html
+        </a>
+      </p>
+      <p>Ambas aplicaciones cumplen con la <strong>Ley 1581 de 2012</strong> (Ley de Proteccion
+        de Datos Personales de Colombia) y sus decretos reglamentarios.</p>
+    </section>
+
+    <section>
+      <h2><span class="n nb">7</span> Ley aplicable y jurisdiccion</h2>
+      <p>Estos terminos de uso se rigen por las leyes de la <strong>Republica de Colombia</strong>.
+        Cualquier controversia derivada del uso de las aplicaciones se sometera a la
+        jurisdiccion de los jueces competentes de la ciudad de <strong>Bogota, D.C.</strong></p>
+    </section>
+
+    <section>
+      <h2><span class="n nb">8</span> Modificaciones a estos terminos</h2>
+      <p>GUTIGU puede actualizar estos terminos de uso en cualquier momento. La version vigente
+        estara siempre disponible en <a href="https://gutigu.com/terms.html" style="color:var(--blue);">gutigu.com/terms.html</a>.</p>
+      <p>Si realizamos cambios sustanciales, te lo notificaremos a traves de la aplicacion.
+        El uso continuado de la app despues de la notificacion implica la aceptacion de los
+        nuevos terminos.</p>
+      <p style="color: var(--muted); font-size: 0.88rem; margin-top: 12px;">
+        Ultima actualizacion: marzo de 2026
+      </p>
+    </section>
+
+    <div class="contact-box">
+      <h2>&#128218; Contacto GUTIGU</h2>
+      <p>Para cualquier duda sobre estos terminos, escríbenos a:<br>
+        <a href="mailto:contacto@gutigu.com">contacto@gutigu.com</a></p>
+      <p style="margin-top: 10px;">
+        <a href="/privacidad.html">Politica de Privacidad</a>
+        &nbsp;&mdash;&nbsp;
+        <a href="/">Volver al sitio</a>
+      </p>
+    </div>
+
+  </div><!-- /comunes -->
 
 </main>
 
-<footer>
-  &copy; 2026 Guardian Digital &amp; SOSquake &middot; Todos los derechos reservados
-</footer>
+<footer-bar>
+  &copy; 2026 GUTIGU &mdash; Bogota, Colombia &mdash;
+  <a href="/privacidad.html">Privacidad</a> &mdash;
+  <a href="/">Inicio</a>
+</footer-bar>
 
 <script>
-  function show(name, el, color) {
+  function show(id, tab) {
     document.querySelectorAll('.app-section').forEach(s => s.classList.remove('active'));
     document.querySelectorAll('.tab').forEach(t => t.classList.remove('green','orange','blue'));
-    document.getElementById('tab-' + name).classList.add('active');
-    el.classList.add(color);
+    document.getElementById(id).classList.add('active');
+    const colors = { guardian: 'green', sosquake: 'orange', comunes: 'blue' };
+    tab.classList.add(colors[id]);
   }
 </script>
 
